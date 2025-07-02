@@ -1,9 +1,9 @@
-import { useState } from 'react'
-import { FaBars, FaGithub, FaTimes } from 'react-icons/fa'
-import Button from '../components/Button'
-import Modal from '../components/Modal'
+import { useState } from "react";
+import { FaBars, FaConnectdevelop, FaGithub, FaTimes } from "react-icons/fa";
+import Button from "../components/Button";
+import Modal from "../components/Modal";
 
-const navLinks: string[] = ['About', 'Skills', 'Projects', 'Contact'];
+const navLinks: string[] = ["About", "Skills", "Projects", "Contact"];
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
@@ -13,18 +13,24 @@ const Header: React.FC = () => {
   const toggleModal = (): void => setShowModal(!showModal);
 
   return (
-    <header className="w-full fixed top-0 left-0 bg-black/80 text-white shadow-md z-50">
-      <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <header className="w-full fixed top-1 left-0 bg-[#121212] text-white shadow-md z-50 transition-opacity border-b  border-white/100 bg-bgbrand/70 backdrop-blur-sm">
+      <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center backdrop-blur-sm">
         {/* Logo */}
-        <div className="text-2xl font-bold tracking-wide">VLADI</div>
+        <div className="text-2xl font-sans tracking-wide text-brand gap-2">
+          <FaConnectdevelop
+            className="inline-block text-white mr-2"
+            size={38}
+          />
+          <span className="text-white">developer</span>
+        </div>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex gap-6 items-center">
+        <nav className="hidden md:flex gap-6 items-center ">
           {navLinks.map((link: string) => (
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
-              className="hover:text-brand transition"
+              className="hover:text-green-700 transition font-extrabold"
             >
               {link}
             </a>
@@ -39,7 +45,7 @@ const Header: React.FC = () => {
           </a>
           <button
             onClick={toggleModal}
-            className="bg-brand text-white px-4 py-1 rounded hover:bg-white hover:text-brand border border-brand transition"
+            className="bg-green-700 text-white px-4 py-1 rounded hover:bg-green-700 hover:font-sans border border-green-700 transition hover:border-gray-300 hover:shadow-white/50 hover:text-brand-black "
           >
             Contact
           </button>
@@ -74,17 +80,19 @@ const Header: React.FC = () => {
           >
             GitHub
           </a>
-          <Button onClick={toggleModal} className="bg-brand text-white hover:bg-white hover:text-brand border border-brand">
-  					Contact
-					</Button>
+          <Button
+            onClick={toggleModal}
+            className="bg-brand text-white hover:bg-black/80 hover:text-brand-black border border-brand"
+          >
+            Contact
+          </Button>
         </div>
       )}
-			{/* Modal */}
-			<Modal isOpen={showModal} onClose={toggleModal} title="Связаться со мной">
-  			<p>Email: vladyslav.omelianenko@gmail.com</p>
-  			<p className="mt-2 text-sm text-gray-500">Форма будет позже 😎</p>
-			</Modal>
-    
+      {/* Modal */}
+      <Modal isOpen={showModal} onClose={toggleModal} title="Связаться со мной">
+        <p>Email: vladyslav.omelianenko@gmail.com</p>
+        <p className="mt-2 text-sm text-gray-500">Form will be soon 😎</p>
+      </Modal>
     </header>
   );
 };
