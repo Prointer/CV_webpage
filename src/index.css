@@ -1,3 +1,29 @@
-@import "tailwindcss/preflight";
-@tailwind components;
-@tailwind utilities;
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --bg-brand: #121212;
+  --brand: rgb(64, 207, 143);
+  --brand-dark: #008236;
+  --brand-light: #6ee7b7;
+}
+
+/* 👇 создаём кастомные утилиты, как будто это Tailwind */
+.text-brand {
+  color: var(--brand);
+}
+.bg-brand {
+  background-color: var(--bg-brand);
+}
+.text-brand-dark {
+  color: var(--brand-dark);
+}
+.text-brand-light {
+  color: var(--brand-light);
+}
+.bg-brand-light {
+  background-color: var(--brand-light);
+}

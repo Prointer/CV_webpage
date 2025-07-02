@@ -1,3 +1,4 @@
+
 import Header from '@sections/Header'
 import Landing from '@sections/Landing'
 import Hero from '@sections/Hero'
@@ -10,6 +11,7 @@ function App() {
     <>
       <Header />
       {/* Main content */}
+
       {/* Added pt-20 (80px) to account for fixed header height. Adjust if header height differs. */}
       <main className="relative pt-20">
         <Landing />
