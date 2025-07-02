@@ -81,7 +81,7 @@ const Header: React.FC = () => {
       )}
 			{/* Modal */}
 			<Modal isOpen={showModal} onClose={toggleModal} title="Связаться со мной">
-  			<p>Email: example@email.com</p>
+  			<p>Email: vladyslav.omelianenko@gmail.com</p>
   			<p className="mt-2 text-sm text-gray-500">Форма будет позже 😎</p>
 			</Modal>
     
