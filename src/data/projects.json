@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "title": {
+      "en": "Travel Booking App",
+      "pl": "Aplikacja do Rezerwacji Podróży",
+      "ua": "Додаток для бронювання подорожей"
+    },
+    "description": {
+      "en": "A React SPA where users can search and book travel destinations.",
+      "pl": "Aplikacja SPA w React, gdzie użytkownicy mogą wyszukiwać i rezerwować podróże.",
+      "ua": "SPA-додаток на React, де користувачі можуть шукати та бронювати напрямки."
+    },
+    "link": "https://github.com/Prointer/Travel-web-site"
+  },
+  {
+    "id": "2",
+    "title": {
+      "en": "Portfolio Website",
+      "pl": "Strona Portfolio",
+      "ua": "Портфоліо-сайт"
+    },
+    "description": {
+      "en": "Personal website with resume, skills, and project gallery.",
+      "pl": "Osobista strona z CV, umiejętnościami i galerią projektów.",
+      "ua": "Особистий сайт з резюме, навичками та галереєю проєктів."
+    },
+    "link": "https://yourportfolio.com"
+  },
+  {
+    "id": "3",
+    "title": {
+      "en": "Tech Gadgets Shop",
+      "pl": "Sklep z Gadżetami Technicznymi",
+      "ua": "Магазин Технічних Новинок"
+    },
+    "description": {
+      "en": "An online store for tech gadgets built with vanilla JS, Node.js, and MySQL. Includes email-based authentication.",
+      "pl": "Sklep internetowy z gadżetami technicznymi zbudowany w czystym JS, Node.js i MySQL. Logowanie przez e-mail.",
+      "ua": "Інтернет-магазин технічних новинок, створений на чистому JS, Node.js та MySQL. Авторизація через електронну пошту."
+    },
+    "link": "https://github.com/Prointer/shop.git"
+  }
+]

@@ -1,44 +1,55 @@
-import React from 'react';
-import HardSkillCard, { HardSkillCardProps, PlaceholderSkillIcon } from '../components/HardSkillCard'; // Adjust path if necessary
+import React from "react";
+import HardSkillCard, {
+  PlaceholderSkillIcon,
+} from "../components/HardSkillCard"; // Adjust path if necessary
+import type { HardSkillCardProps } from "../components/HardSkillCard";
 
 // Sample data for Hard Skills - replace with your actual skills and icons
-const sampleHardSkills: Omit<HardSkillCardProps, 'icon'> & { icon?: React.ReactNode | string }[] = [
+const sampleHardSkills: HardSkillCardProps[] = [
   {
     icon: <PlaceholderSkillIcon bgColor="bg-blue-500" />, // React
-    title: 'React',
-    description: 'Proficient in building dynamic and responsive user interfaces with React. Experienced with hooks, context API, and component-based architecture. Used in most of my frontend projects.',
+    title: "React",
+    description:
+      "Proficient in building dynamic and responsive user interfaces with React. Experienced with hooks, context API, and component-based architecture. Used in most of my frontend projects.",
   },
   {
     icon: <PlaceholderSkillIcon bgColor="bg-yellow-500" />, // JavaScript
-    title: 'JavaScript (ES6+)',
-    description: 'Strong understanding of modern JavaScript features, asynchronous programming, and DOM manipulation. Capable of writing clean, efficient, and maintainable code.',
+    title: "JavaScript (ES6+)",
+    description:
+      "Strong understanding of modern JavaScript features, asynchronous programming, and DOM manipulation. Capable of writing clean, efficient, and maintainable code.",
   },
   {
     icon: <PlaceholderSkillIcon bgColor="bg-sky-500" />, // Tailwind CSS
-    title: 'Tailwind CSS',
-    description: 'Skilled in utility-first CSS framework for rapidly building custom designs. Comfortable with responsive design, dark mode, and customization via tailwind.config.js.',
+    title: "Tailwind CSS",
+    description:
+      "Skilled in utility-first CSS framework for rapidly building custom designs. Comfortable with responsive design, dark mode, and customization via tailwind.config.js.",
   },
   {
     icon: <PlaceholderSkillIcon bgColor="bg-green-600" />, // Node.js
-    title: 'Node.js',
-    description: 'Experience in developing backend services and APIs using Node.js and Express. Familiar with RESTful principles and asynchronous patterns.',
+    title: "Node.js",
+    description:
+      "Experience in developing backend services and APIs using Node.js and Express. Familiar with RESTful principles and asynchronous patterns.",
   },
   {
     icon: <PlaceholderSkillIcon bgColor="bg-red-500" />, // Git
-    title: 'Git & GitHub',
-    description: 'Proficient with version control using Git, including branching, merging, rebasing, and collaborating effectively through platforms like GitHub.',
+    title: "Git & GitHub",
+    description:
+      "Proficient with version control using Git, including branching, merging, rebasing, and collaborating effectively through platforms like GitHub.",
   },
   {
     icon: <PlaceholderSkillIcon bgColor="bg-indigo-500" />, // TypeScript
-    title: 'TypeScript',
-    description: 'Using TypeScript to enhance JavaScript projects with static typing, improving code quality, maintainability, and developer experience.',
+    title: "TypeScript",
+    description:
+      "Using TypeScript to enhance JavaScript projects with static typing, improving code quality, maintainability, and developer experience.",
   },
 ];
 
-
 const Skills: React.FC = () => {
   return (
-    <section id="skills" className="py-16 md:py-24 bg-bgbrand dark:bg-bgbrand-dark">
+    <section
+      id="skills"
+      className="py-16 md:py-24 bg-bgbrand dark:bg-bgbrand-dark"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-gray-800 dark:text-white mb-16 md:mb-20">
           My Skills

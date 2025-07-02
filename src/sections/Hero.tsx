@@ -1,4 +1,7 @@
-import React from 'react';
+
+import React from "react";
+import HeroPhoto from "../assets/CV_main_photo - Edited.jpg";
+
 
 const Hero: React.FC = () => {
   return (
@@ -13,13 +16,18 @@ const Hero: React.FC = () => {
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
             Hi, I'm <span className="text-brand">Vladyslav</span>!
             <span className="block text-2xl sm:text-3xl md:text-4xl text-gray-700 dark:text-gray-400 mt-2">
-              From sketch to screen — I design and develop user-first web experiences.
+              From sketch to screen — I design and develop user-first web
+              experiences.
             </span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8">
-            I design and develop modern web interfaces with focus on performance, accessibility, and user experience. Using technologies like React, TypeScript, and Tailwind, I turn complex ideas into simple and elegant solutions.
+
+            I design and develop modern web interfaces with focus on
+            performance, accessibility, and user experience. Using technologies
+            like React, TypeScript, and Tailwind, I turn complex ideas into
+            simple and elegant solutions.
           </p>
 
           {/* Buttons */}
