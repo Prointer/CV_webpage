@@ -1,4 +1,3 @@
-
 @import "tailwindcss";
 
 @theme {
@@ -26,4 +25,8 @@
 }
 .bg-brand-light {
   background-color: var(--brand-light);
+}
+.photo-glow {
+  box-shadow: 0 0 15px rgba(64, 207, 143, 0.4), 0 0 30px rgba(64, 207, 143, 0.3),
+    0 0 45px rgba(64, 207, 143, 0.2);
 }
