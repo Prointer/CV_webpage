@@ -1,6 +1,11 @@
-import React, { useState } from 'react';
-import { TimelineItem, TimelineCategory } from '../types/timeline'; // Adjust path if needed
-import { FaChevronDown, FaChevronUp, FaExternalLinkAlt, FaMapMarkerAlt } from 'react-icons/fa'; // For expand/collapse and links
+import React, { useState } from "react";
+import {
+  FaChevronDown,
+  FaChevronUp,
+  FaExternalLinkAlt,
+  FaMapMarkerAlt,
+} from "react-icons/fa"; // For expand/collapse and links
+import type { TimelineCategory, TimelineItem } from "../types/timeline"; // Adjust path if needed
 
 export interface TimelineCardProps {
   item: TimelineItem;
@@ -13,19 +18,21 @@ const formatDateRange = (start: string, end: string): string => {
   return `${start} - ${end}`;
 };
 
-const getCategoryAccentColor = (category: TimelineCategory, defaultColor: string = 'border-gray-400 dark:border-gray-600') => {
+const getCategoryAccentColor = (
+  category: TimelineCategory,
+  defaultColor: string = "border-gray-400 dark:border-gray-600"
+) => {
   switch (category) {
-    case 'experience':
-      return 'border-sky-500 dark:border-sky-400';
-    case 'education':
-      return 'border-purple-500 dark:border-purple-400';
-    case 'certificates':
-      return 'border-green-500 dark:border-green-400';
+    case "experience":
+      return "border-sky-500 dark:border-sky-400";
+    case "education":
+      return "border-purple-500 dark:border-purple-400";
+    case "certificates":
+      return "border-green-500 dark:border-green-400";
     default:
       return defaultColor;
   }
 };
-
 
 const TimelineCard: React.FC<TimelineCardProps> = ({ item }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -35,18 +42,30 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ item }) => {
   const accentColorClass = getCategoryAccentColor(item.category);
 
   return (
-    <div className={`timeline-card-placeholder bg-bgbrand-light dark:bg-bgbrand-dark/70 p-5 rounded-lg shadow-md border-l-4 ${accentColorClass} mb-6`}>
+    <div
+      className={`timeline-card-placeholder bg-bgbrand-light dark:bg-bgbrand-dark/70 p-5 rounded-lg shadow-md border-l-4 ${accentColorClass} mb-6`}
+    >
       {/* Compact View / Header of the card */}
       <div className="flex justify-between items-start">
         <div>
-          <h3 className="text-lg font-semibold text-gray-800 dark:text-white">{item.title}</h3>
-          <p className="text-sm text-brand dark:text-brand-light font-medium">{item.place}</p>
+          <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
+            {item.title}
+          </h3>
+          <p className="text-sm text-brand dark:text-brand-light font-medium">
+            {item.place}
+          </p>
           <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
             {formatDateRange(item.dateStart, item.dateEnd)}
-            {item.location && <span className="ml-2 inline-flex items-center"><FaMapMarkerAlt className="mr-1 opacity-70" />{item.location}</span>}
+            {item.location && (
+              <span className="ml-2 inline-flex items-center">
+                <FaMapMarkerAlt className="mr-1 opacity-70" />
+                {item.location}
+              </span>
+            )}
           </p>
         </div>
         <button
+          type="button"
           onClick={toggleExpand}
           className="p-2 text-gray-600 dark:text-gray-400 hover:text-brand dark:hover:text-brand-light"
           aria-expanded={isExpanded}
@@ -59,9 +78,14 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ item }) => {
       {/* Expanded View (Conditional) - Basic implementation for now */}
       {/* Animation will be added in Phase 2 with Framer Motion */}
       {isExpanded && (
-        <div id={`timeline-desc-${item.id}`} className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
-          {typeof item.description === 'string' ? (
-            <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line">{item.description}</p>
+        <div
+          id={`timeline-desc-${item.id}`}
+          className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700"
+        >
+          {typeof item.description === "string" ? (
+            <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line">
+              {item.description}
+            </p>
           ) : (
             <ul className="list-disc list-inside space-y-1 text-sm text-gray-700 dark:text-gray-300">
               {item.description.map((descPoint, index) => (

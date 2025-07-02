@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 interface ModalProps {
   isOpen: boolean;
@@ -14,6 +14,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
     <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
       <div className="bg-white p-6 rounded-xl max-w-sm w-full text-black relative">
         <button
+          type="button"
           onClick={onClose}
           className="absolute top-3 right-3 text-gray-600 hover:text-black text-xl"
           aria-label="Close modal"
