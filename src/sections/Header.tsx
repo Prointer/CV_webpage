@@ -14,7 +14,8 @@ const Header: React.FC = () => {
   const toggleModal = (): void => setShowModal(!showModal);
 
   return (
-    <header className="w-full fixed top-0.5 left-0 bg-[#121212]/50 text-white shadow-md z-50 transition-opacity border-b  border-white/100 bg-bgbrand/70 backdrop-blur-sm">
+    <header className="w-full fixed top-0 left-0 right-0 bg-bgbrand/80 dark:bg-bgbrand-dark/80 text-white shadow-lg z-50 transition-all duration-300 border-b border-white/20 backdrop-blur-md">
+
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <Logo />
