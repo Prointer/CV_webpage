@@ -1,20 +1,22 @@
 import Header from '@sections/Header'
 import Landing from '@sections/Landing'
-import Hero from '@sections/Hero' // Import the new Hero component
+import Hero from '@sections/Hero'
+import Portfolio from '@sections/Portfolio' // Import the new Portfolio component
 
 function App() {
   return (
-    // Removed main container div to allow sections like Hero to be full-width if needed
     <>
       <Header />
       {/* Main content */}
       {/* Added pt-20 (80px) to account for fixed header height. Adjust if header height differs. */}
       <main className="relative pt-20">
         <Landing />
-        <Hero /> {/* Add the Hero component */}
+        <Hero />
+        <Portfolio /> {/* Add the Portfolio component */}
         {/* Other sections can be added here */}
 
         {/* Test div for colors - you may want to remove or relocate this later */}
+        {/*
         <div className="space-y-4 p-8 bg-bgbrand text-white">
           <p className="text-brand">This is brand color</p>
           <p className="text-brand-light">This is brand-light</p>
@@ -22,6 +24,7 @@ function App() {
           <p className="bg-brand text-white px-4 py-2">Background brand</p>
           <p className="bg-bgbrand text-white px-4 py-2">Background bgbrand</p>
         </div>
+        */}
       </main>
     </>
   );
