@@ -1,25 +1,40 @@
-import React from 'react'
-import HeroPhoto from '../assets/CV_main_photo - Edited.jpg'
+import React from "react";
+import HeroPhoto from "../assets/CV_main_photo - Edited.jpg";
 const Hero: React.FC = () => {
   return (
-    <section 
-      id="hero" 
-      className="min-h-screen flex items-center bg-bgbrand text-gray-800 dark:text-gray-200 px-4 sm:px-6 lg:px-8 py-16 md:py-24"
+    <section
+      id="hero"
+      className="min-h-screen flex items-center bg-bg-brand text-gray-800 dark:text-gray-200 px-4 sm:px-6 lg:px-8 py-16 md:py-24"
     >
       <div className="container mx-auto flex flex-col md:flex-row items-center">
         {/* Left Column: Text Content */}
         <div className="md:w-1/2 lg:w-3/5 text-center md:text-left mb-12 md:mb-0 md:pr-12">
           {/* Headline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight font-extralight">
-            Hi, I'm <span className="text-brand text-green-500 font-bold">Vladyslav</span>!
+            Hi, I'm{" "}
+            <span className="text-brand text-green-500 font-bold">
+              Vladyslav
+            </span>
+            !
             <span className="block text-xl sm:text-2xl md:text-3xl text-gray-700 dark:text-gray-400 mt-2">
-              From sketch to screen — I <span className="text-brand text-green-500 font-light">design</span> and <span className="text-brand text-green-500 font-light">develop</span> user-first web experiences.
+              From sketch to screen — I{" "}
+              <span className="text-brand text-green-500 font-light">
+                design
+              </span>{" "}
+              and{" "}
+              <span className="text-brand text-green-500 font-light">
+                develop
+              </span>{" "}
+              user-first web experiences.
             </span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-100 mb-8 font-extralight">
-            I design and develop modern web interfaces with focus on performance, accessibility, and user experience. Using technologies like React, TypeScript, and Tailwind, I turn complex ideas into simple and elegant solutions.
+          <p className="text-lg sm:text-xl md:text-2xl text-brand dark:text-gray-100 mb-8 font-extralight">
+            I design and develop modern web interfaces with focus on
+            performance, accessibility, and user experience. Using technologies
+            like React, TypeScript, and Tailwind, I turn complex ideas into
+            simple and elegant solutions.
           </p>
 
           {/* Buttons */}
@@ -41,36 +56,39 @@ const Hero: React.FC = () => {
 
         {/* Right Column: Profile Photo Area */}
         <div className="md:w-1/2 lg:w-2/5 flex justify-center md:justify-end">
-          <div className="relative group"> {/* Added group for potential group-hover effects on decals */}
-            <div 
+          <div className="relative group">
+            {" "}
+            {/* Added group for potential group-hover effects on decals */}
+            <div
               className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto rounded-full overflow-hidden border-4 border-brand-light relative flex items-center justify-center"
               style={{
                 boxShadow: `
                   0 0 15px rgba(64, 207, 143, 0.4), 
                   0 0 30px rgba(64, 207, 143, 0.3), 
                   0 0 45px rgba(64, 207, 143, 0.2)
-                `
+                `,
               }}
             >
               {/* This div is for the actual image - replace span with <img> later */}
               <div className="w-full h-full bg-gray-700 dark:bg-gray-600 flex items-center justify-center">
-                <span className="text-gray-400 dark:text-gray-300 text-lg"><img src={HeroPhoto} alt="Photo" /></span>
+                <span className="text-gray-400 dark:text-gray-300 text-lg">
+                  <img src={HeroPhoto} alt="Photo" />
+                </span>
               </div>
             </div>
-
             {/* Placeholder Decorative Decals - Simple Circles */}
             {/* Positioned relative to the new column layout, may need further adjustment */}
-            <div 
+            <div
               className="absolute -top-5 -left-5 w-12 h-12 sm:w-14 sm:h-14 bg-brand opacity-50 rounded-full animate-pulse"
-              style={{ animationDuration: '3s' }}
+              style={{ animationDuration: "3s" }}
             ></div>
-            <div 
+            <div
               className="absolute -bottom-5 -right-5 w-16 h-16 sm:w-20 sm:h-20 bg-brand-light opacity-40 rounded-full animate-pulse"
-              style={{ animationDelay: '0.5s', animationDuration: '4s' }}
+              style={{ animationDelay: "0.5s", animationDuration: "4s" }}
             ></div>
-            <div 
+            <div
               className="absolute top-0 -right-8 sm:top-2 sm:-right-10 w-8 h-8 sm:w-10 sm:h-10 border-2 border-brand-dark opacity-60 rounded-full animate-ping"
-              style={{ animationDuration: '2.5s' }}
+              style={{ animationDuration: "2.5s" }}
             ></div>
           </div>
         </div>
