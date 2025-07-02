@@ -1,0 +1,149 @@
+[
+  {
+    "id": "1",
+    "degree": {
+      "en": "Bachelor of Computer Science",
+      "pl": "Licencjat z Informatyki",
+      "ua": "Бакалавр комп'ютерних наук"
+    },
+    "institution": "Akademia WSB in Dąbrowa Górnicza",
+    "startDate": "2014-09-01",
+    "endDate": "2018-06-30",
+    "location": "Dąbrowa Górnicza, Poland",
+    "description": {
+      "en": "Specialized on software development, algorithms, and data structures.",
+      "pl": "Zajmował się rozwojem oprogramowania, algorytmami i strukturami danych.",
+      "ua": "Спеціалізувався на розробці програмного забезпечення, алгоритмах та структурах даних."
+    },
+    "certificate": "/certificates/Dyplom_studia1stopnia.pdf"
+  },
+  {
+    "id": "2",
+    "degree": {
+      "en": "Master of Computer Network Security",
+      "pl": "Magister Bezpieczeństwa Sieci Komputerowych",
+      "ua": "Магістр безпеки комп'ютерних мереж"
+    },
+    "institution": "Akademia WSB in Dąbrowa Górnicza",
+    "startDate": "2018-09-01",
+    "endDate": "not completed",
+    "location": "Dąbrowa Górnicza, Poland",
+    "description": {
+      "en": "Specialized in protecting computer networks and data against unauthorized access, abuse, damage, modifications and theft.",
+      "pl": "Specjalizował się w ochronie sieci komputerowych i danych przed nieautoryzowanym dostępem, nadużyciami, uszkodzeniami, modyfikacjami i kradzieżą.",
+      "ua": "Спеціалізувався на захисті комп'ютерних мереж і даних від несанкціонованого доступу, зловживань, пошкоджень, модифікацій та крадіжок."
+    },
+    "certificate": null
+  },
+  {
+    "id": "3",
+    "degree": {
+      "en": "Course of Agile Scrum Master",
+      "pl": "Kurs Scrum Mastera Agile",
+      "ua": "Курс Scrum Master Agile"
+    },
+    "institution": "Promity Academy",
+    "startDate": "2022-04-25",
+    "endDate": "2022-04-26",
+    "location": "Katowice, Poland",
+    "description": {
+      "en": "Gained foundational knowledge necessary for working as a Scrum Master in Agile methodology, including Scrum terminology, roles, Scrum reporting, and risk management.",
+      "pl": "Dostal podstawowa wiedze niezbędna do pracy jako Scrum Master w metodologii Agile, w tym terminologii Scrum, ról Scrum, raportowania Scrum i zarządzania ryzykiem.",
+      "ua": "Набували основні знання, необхідні для роботи Scrum Master в методології Agile, включаючи термінологію Scrum, ролі Scrum, звітність Scrum та управління ризиками."
+    },
+    "certificate": "/certificates/Certificate_Scrum.pdf"
+  },
+  {
+    "id": "4",
+    "degree": {
+      "en": "Course of ReactJS Developer",
+      "pl": "Kurs ReactJS Developera",
+      "ua": "Курс ReactJS Розробника"
+    },
+    "institution": "ItGid",
+    "startDate": "2021-03-01",
+    "endDate": "2021-06-30",
+    "location": "Katowice, Poland",
+    "description": {
+      "en": "During this course, I gained a deep understanding of the fundamentals of React — from creating components and managing state to routing and data management. This was a key step in my transition to modern front-end development.",
+      "ua": "Під час цього курсу я отримав глибоке розуміння основ React — від створення компонентів і роботи зі станом до маршрутизації та управління даними. Це стало ключовим етапом у моєму переході до сучасної фронтенд-розробки.",
+      "pl": "Podczas tego kursu zdobyłem głębokie zrozumienie podstaw React — od tworzenia komponentów i zarządzania stanem po routowanie i zarządzanie danymi. To był kluczowy krok w moim przejściu do nowoczesnej front-end development."
+    },
+    "certificate": null
+  },
+  {
+    "id": "5",
+    "degree": {
+      "en": "Course of JavaScript 2.0",
+      "pl": "Kurs JavaScript 2.0",
+      "ua": "Курс JavaScript 2.0"
+    },
+    "institution": "ItGid",
+    "startDate": "2021-07-01",
+    "endDate": "2021-10-31",
+    "location": "Katowice, Poland",
+    "description": {
+      "en": "In this course, I studied the basics of JavaScript, including ES6 and asynchronous programming, which gave me a solid foundation for further growth as a frontend developer.",
+      "pl": "W tym kursie studiowałem podstawy JavaScript, w tym ES6 i programowanie asynchroniczne, co dało mi solidne podstawy do dalszego rozwoju jako frontend developer.",
+      "ua": "На цьому курсі я вивчав основи JavaScript, включаючи ES6 та асинхронне програмування, що дало мені міцну основу для подальшого розвитку як фронтенд-розробника."
+    },
+    "certificate": "/certificates/Certificate JS2.0.pdf"
+  },
+  {
+    "id": "6",
+    "degree": {
+      "en": "Course Node.js",
+      "pl": "Kurs Node.js",
+      "ua": "Курс Node.js"
+    },
+    "institution": "ItGid",
+    "startDate": "2021-11-01",
+    "endDate": "2022-02-28",
+    "location": "Katowice, Poland",
+    "description": {
+      "en": "In this course, I learned the basics of Node.js, including working with Express.js and mySQL, which allowed me to create full-stack applications and understand server-side development.",
+      "pl": "W tym kursie nauczyłem się podstaw Node.js, w tym pracy z Express.js i MySQL, co pozwoliło mi tworzyć aplikacje full-stack i zrozumieć rozwój po stronie serwera.",
+      "ua": "На цьому курсі я вивчив основи Node.js, включаючи роботу з Express.js та MySQL, що дозволило мені створювати повноцінні додатки та зрозуміти розробку на стороні сервера."
+    },
+    "certificate": null
+  },
+  {
+    "id": "7",
+    "degree": {
+      "en": "Postgraduate Studies: Front-end Developer",
+      "pl": "Studia Podyplomowe: Front-end Developer",
+      "ua": "Postgraduate Studies: Front-end розробник"
+    },
+    "institution": "WSKZ",
+    "startDate": "2023-03-01",
+    "endDate": "2024-03-30",
+    "location": "Studies online in Wroclaw, Poland",
+    "description": {
+      "en": "This program provided me with a comprehensive understanding of front-end development, including advanced JavaScript, React, and modern web technologies. It was instrumental in my transition to a full-time front-end developer role.",
+      "pl": "Ten program zapewnił mi kompleksowe zrozumienie front-end development, w tym zaawansowany JavaScript, React i nowoczesne technologie webowe. Był kluczowy w moim przejściu do roli full-time front-end developera.",
+      "ua": "Ця програма надала мені комплексне розуміння фронтенд-розробки, включаючи розширений JavaScript, React та сучасні веб-технології. Вона була вирішальною у моєму переході до ролі full-time фронтенд-розробника."
+    },
+    "certificate": {
+      "en": "/certificates/Certificate postgraduate Front en.pdf",
+      "pl": "/certificates/Certificate postgraduate Front pl.pdf"
+    }
+  },
+  {
+    "id": "8",
+    "degree": {
+      "en": "Postgraduate Studies: Agile – Management in Organizations",
+      "pl": "Studia Podyplomowe: Agile – Zarządzanie w organizacjach",
+      "ua": "Postgraduate Studies: Agile – Управління в організаціях"
+    },
+    "institution": "WSKZ",
+    "startDate": "2024-04-01",
+    "endDate": "Presently",
+    "location": "Studies online in Wroclaw, Poland",
+    "description": {
+      "en": "This program focuses on Agile methodologies and their application in organizational management, enhancing my skills in project management and team leadership.",
+      "pl": "Ten program koncentruje się na metodach Agile i ich zastosowaniu w zarządzaniu organizacjami, co zwiększa moje umiejętności w zakresie zarządzania projektami i kierowania zespołem.",
+      "ua": "Ця програма зосереджена на методах Agile та їх застосуванні в управлінні організаціями, що підвищує мої навички в управлінні проектами та керівництві командою."
+    },
+    "certificate": null
+  }
+]
