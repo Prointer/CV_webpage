@@ -2,7 +2,8 @@ import Header from '@sections/Header'
 import Landing from '@sections/Landing'
 import Hero from '@sections/Hero'
 import Portfolio from '@sections/Portfolio'
-import Skills from '@sections/Skills' // Import the new Skills component
+import Skills from '@sections/Skills'
+import ExperienceEducation from '@sections/ExperienceEducation' // Import the new ExperienceEducation component
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
         <Landing />
         <Hero />
         <Portfolio />
-        <Skills /> {/* Add the Skills component */}
+        <Skills />
+        <ExperienceEducation /> {/* Add the ExperienceEducation component */}
         {/* Other sections can be added here */}
 
         {/* Test div for colors - you may want to remove or relocate this later */}
