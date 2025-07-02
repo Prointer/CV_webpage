@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { FaBars, FaConnectdevelop, FaGithub, FaTimes } from "react-icons/fa";
+import { FaBars, FaGithub, FaTimes } from "react-icons/fa";
 import Button from "../components/Button";
+import Logo from "../components/Logo";
 import Modal from "../components/Modal";
 
 const navLinks: string[] = ["About", "Skills", "Projects", "Contact"];
@@ -13,16 +14,10 @@ const Header: React.FC = () => {
   const toggleModal = (): void => setShowModal(!showModal);
 
   return (
-    <header className="w-full fixed top-1 left-0 bg-[#121212] text-white shadow-md z-50 transition-opacity border-b  border-white/100 bg-bgbrand/70 backdrop-blur-sm">
-      <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center backdrop-blur-sm">
+    <header className="w-full fixed top-0.5 left-0 bg-[#121212]/50 text-white shadow-md z-50 transition-opacity border-b  border-white/100 bg-bgbrand/70 backdrop-blur-sm">
+      <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-2xl font-sans tracking-wide text-brand gap-2">
-          <FaConnectdevelop
-            className="inline-block text-white mr-2"
-            size={38}
-          />
-          <span className="text-white">developer</span>
-        </div>
+        <Logo />
 
         {/* Desktop nav */}
         <nav className="hidden md:flex gap-6 items-center ">
@@ -30,7 +25,7 @@ const Header: React.FC = () => {
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
-              className="hover:text-green-700 transition font-extrabold"
+              className="hover:text-green-700 transition font-bold"
             >
               {link}
             </a>

@@ -1,22 +1,19 @@
 // tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 const config = {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}"
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
         brand: "#40CF8F",
-				bgbrand: { DEFAULT: "#121212", light: "#FFFFFF", dark: "#121212" },
+        bgbrand: { DEFAULT: "#121212", light: "#FFFFFF", dark: "#121212" },
       },
-			fontFamily:{
-				sans: ['-apple-system', 'Inter', 'system-ui', 'sans-serif'],
-			}
-    }
+      fontFamily: {
+        sans: ["-apple-system", "Inter", "system-ui", "sans-serif"],
+      },
+    },
   },
-  plugins: []
-}
+  plugins: [],
+};
 
-export default config
+export default config;
