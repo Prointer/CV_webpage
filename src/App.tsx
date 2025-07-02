@@ -1,7 +1,8 @@
 import Header from '@sections/Header'
 import Landing from '@sections/Landing'
 import Hero from '@sections/Hero'
-import Portfolio from '@sections/Portfolio' // Import the new Portfolio component
+import Portfolio from '@sections/Portfolio'
+import Skills from '@sections/Skills' // Import the new Skills component
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       <main className="relative pt-20">
         <Landing />
         <Hero />
-        <Portfolio /> {/* Add the Portfolio component */}
+        <Portfolio />
+        <Skills /> {/* Add the Skills component */}
         {/* Other sections can be added here */}
 
         {/* Test div for colors - you may want to remove or relocate this later */}
