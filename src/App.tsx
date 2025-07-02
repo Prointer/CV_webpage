@@ -1,24 +1,29 @@
 import Header from '@sections/Header'
 import Landing from '@sections/Landing'
+import Hero from '@sections/Hero' // Import the new Hero component
 
 function App() {
   return (
-    <div className="container">
+    // Removed main container div to allow sections like Hero to be full-width if needed
+    <>
       <Header />
       {/* Main content */}
-      <main className="relative min-h-screen">
+      {/* Added pt-20 (80px) to account for fixed header height. Adjust if header height differs. */}
+      <main className="relative pt-20">
         <Landing />
+        <Hero /> {/* Add the Hero component */}
         {/* Other sections can be added here */}
-        <div className="space-y-4 p-8 bg-bgbrand text-white">
-      <p className="text-brand">This is brand color</p>
-      <p className="text-brand-light">This is brand-light</p>
-      <p className="text-brand-dark">This is brand-dark</p>
-      <p className="bg-brand text-white px-4 py-2">Background brand</p>
-      <p className="bg-bgbrand text-white px-4 py-2">Background bgbrand</p>
-    </div>
-      </main>
 
-    </div>
+        {/* Test div for colors - you may want to remove or relocate this later */}
+        <div className="space-y-4 p-8 bg-bgbrand text-white">
+          <p className="text-brand">This is brand color</p>
+          <p className="text-brand-light">This is brand-light</p>
+          <p className="text-brand-dark">This is brand-dark</p>
+          <p className="bg-brand text-white px-4 py-2">Background brand</p>
+          <p className="bg-bgbrand text-white px-4 py-2">Background bgbrand</p>
+        </div>
+      </main>
+    </>
   );
 }
 
