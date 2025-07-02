@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import { FaBars, FaGithub, FaTimes } from 'react-icons/fa'
-import Logo_gif from '../assets/icons8-code.gif'
+import { FaBars, FaConnectdevelop, FaGithub, FaTimes } from 'react-icons/fa'
 import Button from '../components/Button'
 import Modal from '../components/Modal'
 
@@ -14,11 +13,12 @@ const Header: React.FC = () => {
   const toggleModal = (): void => setShowModal(!showModal);
 
   return (
-    <header className="w-full fixed top-1 left-0 bg-black text-white shadow-md z-50 transition-opacity border-b backdrop:blur-sm border-white/100 ">
-      <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <header className="w-full fixed top-1 left-0 bg-[#121212] text-white shadow-md z-50 transition-opacity border-b  border-white/100 bg-bgbrand/70 backdrop-blur-sm">
+      <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center backdrop-blur-sm">
         {/* Logo */}
         <div className="text-2xl font-sans tracking-wide text-brand gap-2">
-          <img src={Logo_gif} alt="Logo" className="w-8 h-8" />
+          <FaConnectdevelop className="inline-block text-white mr-2" size={38}  />
+          <span className="text-white">developer</span>
         </div>
 
         {/* Desktop nav */}
@@ -27,7 +27,7 @@ const Header: React.FC = () => {
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
-              className="hover:text-green-700 transition font-bold"
+              className="hover:text-green-700 transition font-extrabold"
             >
               {link}
             </a>
@@ -42,7 +42,7 @@ const Header: React.FC = () => {
           </a>
           <button
             onClick={toggleModal}
-            className="bg-green-800 text-white px-4 py-1 rounded hover:bg-green-700 hover:font-sans border border-gray-500 transition hover:border-"
+            className="bg-green-700 text-white px-4 py-1 rounded hover:bg-green-700 hover:font-sans border border-green-700 transition hover:border-gray-300 hover:shadow-white/50 hover:text-brand-black "
           >
             Contact
           </button>
@@ -84,8 +84,8 @@ const Header: React.FC = () => {
       )}
 			{/* Modal */}
 			<Modal isOpen={showModal} onClose={toggleModal} title="Связаться со мной">
-  			<p>Email: example@email.com</p>
-  			<p className="mt-2 text-sm text-gray-500">Форма будет позже 😎</p>
+  			<p>Email: vladyslav.omelianenko@gmail.com</p>
+  			<p className="mt-2 text-sm text-gray-500">Form will be soon 😎</p>
 			</Modal>
     
     </header>
