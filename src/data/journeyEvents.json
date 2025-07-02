@@ -1,0 +1,37 @@
+[
+  {
+    "id": "journey1",
+    "title": "Graduated from IT University",
+    "description": "Completed my Bachelor's degree in Computer Science, focusing on software development and web technologies. This was a foundational period where I built a strong understanding of core programming concepts.",
+    "date": "May 2015",
+    "imageUrl": "https://via.placeholder.com/400x250.png?text=University+Graduation"
+  },
+  {
+    "id": "journey2",
+    "title": "First Steps as a Developer",
+    "description": "Landed my first role as a Junior Developer, working on various client projects. Gained practical experience in HTML, CSS, JavaScript, and server-side scripting.",
+    "date": "July 2015",
+    "imageUrl": "https://via.placeholder.com/400x250.png?text=First+Dev+Job"
+  },
+  {
+    "id": "journey3",
+    "title": "Explored Culinary Arts",
+    "description": "Took a detour to explore a passion for cooking and worked as a Chef. This experience taught me a lot about creativity, precision, and working under pressure in a fast-paced environment.",
+    "date": "March 2017",
+    "imageUrl": "https://via.placeholder.com/400x250.png?text=Chef+Life"
+  },
+  {
+    "id": "journey4",
+    "title": "Returned to Tech",
+    "description": "Rediscovered my passion for technology and decided to dive back into software development, focusing on modern JavaScript frameworks like React and Node.js for backend development.",
+    "date": "January 2023",
+    "imageUrl": "https://via.placeholder.com/400x250.png?text=Back+to+Tech"
+  },
+  {
+    "id": "journey5",
+    "title": "Deep Dive into React & Portfolio Build",
+    "description": "Intensively studied React, TypeScript, and modern frontend practices. Started building personal projects, including this very portfolio website, to solidify my skills.",
+    "date": "June 2023 - Present",
+    "imageUrl": "https://via.placeholder.com/400x250.png?text=React+Portfolio"
+  }
+]
