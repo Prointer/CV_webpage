@@ -4,7 +4,8 @@ import Hero from '@sections/Hero'
 import Portfolio from '@sections/Portfolio'
 import Skills from '@sections/Skills'
 import ExperienceEducation from '@sections/ExperienceEducation'
-import AboutMeTimelineSection from '@sections/AboutMeTimelineSection' // Import the new AboutMeTimelineSection
+import AboutMeTimelineSection from '@sections/AboutMeTimelineSection'
+import ContactSection from '@sections/ContactSection' // Import the new ContactSection
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
         <Portfolio />
         <Skills />
         <ExperienceEducation />
-        <AboutMeTimelineSection /> {/* Add the AboutMeTimelineSection component */}
+        <AboutMeTimelineSection />
+        <ContactSection /> {/* Add the ContactSection component */}
         {/* Other sections can be added here */}
 
         {/* Test div for colors - you may want to remove or relocate this later */}
