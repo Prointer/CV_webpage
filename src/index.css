@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
+/* Кастомные переменные через @theme */
 @theme {
   --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-
   --bg-brand: #121212;
   --brand: rgb(64, 207, 143);
-  --brand-dark: #008236;
-  --brand-light: #6ee7b7;
-  --brand-bg-buttons: ;
+  --brand-dark: #6ee7b7;
+  --brand-light: #008236;
+  --brand-bg-buttons: rgba(64, 207, 143, 0.1);
 }
 
-/* 👇 создаём кастомные утилиты, как будто это Tailwind */
+/* Кастомные утилиты */
 .text-brand {
   color: var(--brand);
 }
@@ -27,9 +27,27 @@
 .bg-brand-light {
   background-color: var(--brand-light);
 }
+
 .photo-glow {
-  box-shadow: 0 0 15px rgba(64, 207, 143, 0.4), 0 0 30px rgba(64, 207, 143, 0.3),
-    0 0 45px rgba(64, 207, 143, 0.2);
+  box-shadow: 0 0 15px rgba(64, 207, 143, 0.4),
+              0 0 30px rgba(64, 207, 143, 0.3),
+              0 0 45px rgba(64, 207, 143, 0.2);
 }
+
+/* 👇 Добавляем кастомную утилиту для шрифта */
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Кнопка в стиле бренда */
 .color-button {
+  background-color: var(--brand-bg-buttons);
+  color: var(--brand-dark);
+  border: 1px solid var(--brand);
+  transition: all 0.3s ease;
+}
+.color-button:hover {
+  background-color: var(--brand);
+  color: black;
+  box-shadow: 0 0 10px rgba(64, 207, 143, 0.6);
 }
