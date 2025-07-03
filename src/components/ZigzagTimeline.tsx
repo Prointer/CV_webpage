@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { JourneyEvent } from '../types/journey'; // Adjust path if needed
-import ZigzagTimelineEvent from './ZigzagTimelineEvent'; // Adjust path if needed
-import TimelinePopup from './TimelinePopup'; // Adjust path if needed
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import type { JourneyEvent } from "../types/journey"; // Adjust path if needed
+import ZigzagTimelineEvent from "./ZigzagTimelineEvent"; // Adjust path if needed
+import TimelinePopup from "./TimelinePopup"; // Adjust path if needed
 
 interface ZigzagTimelineProps {
   events: JourneyEvent[];
@@ -20,7 +20,8 @@ const ZigzagTimeline: React.FC<ZigzagTimelineProps> = ({ events }) => {
     setSelectedEventId(null);
   };
 
-  const selectedEvent = events.find(event => event.id === selectedEventId) || null;
+  const selectedEvent =
+    events.find((event) => event.id === selectedEventId) || null;
 
   // Check for small screen size for responsive layout
   useEffect(() => {
@@ -28,8 +29,8 @@ const ZigzagTimeline: React.FC<ZigzagTimelineProps> = ({ events }) => {
       setIsSmallScreen(window.innerWidth < 768); // Tailwind's md breakpoint
     };
     checkScreenSize();
-    window.addEventListener('resize', checkScreenSize);
-    return () => window.removeEventListener('resize', checkScreenSize);
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
   const containerVariants = {
@@ -62,7 +63,9 @@ const ZigzagTimeline: React.FC<ZigzagTimelineProps> = ({ events }) => {
           <ZigzagTimelineEvent
             key={event.id}
             event={event}
-            alignment={isSmallScreen ? 'center' : (index % 2 === 0 ? 'left' : 'right')}
+            alignment={
+              isSmallScreen ? "center" : index % 2 === 0 ? "left" : "right"
+            }
             onDotClick={handleDotClick}
             isLast={index === events.length - 1}
           />

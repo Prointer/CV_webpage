@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { JourneyEvent } from '../types/journey'; // Adjust path if needed
-import { FaTimes } from 'react-icons/fa';
+import { AnimatePresence, motion } from "framer-motion";
+import React from "react";
+import { FaTimes } from "react-icons/fa";
+import type { JourneyEvent } from "../types/journey"; // Adjust path if needed
 
 interface TimelinePopupProps {
   event: JourneyEvent | null;
@@ -45,6 +45,7 @@ const TimelinePopup: React.FC<TimelinePopupProps> = ({ event, onClose }) => {
           >
             {/* Close Button */}
             <button
+              type="button"
               onClick={onClose}
               className="absolute top-3 right-3 text-gray-500 dark:text-gray-400 hover:text-red-500 dark:hover:text-red-400 transition-colors"
               aria-label="Close popup"
@@ -65,8 +66,12 @@ const TimelinePopup: React.FC<TimelinePopupProps> = ({ event, onClose }) => {
 
             {/* Content */}
             <div className="p-6">
-              <p className="text-sm text-brand dark:text-brand-light font-semibold mb-1">{event.date}</p>
-              <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-3">{event.title}</h3>
+              <p className="text-sm text-brand dark:text-brand-light font-semibold mb-1">
+                {event.date}
+              </p>
+              <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-3">
+                {event.title}
+              </h3>
               <p className="text-base text-gray-700 dark:text-gray-300 whitespace-pre-line">
                 {event.description}
               </p>

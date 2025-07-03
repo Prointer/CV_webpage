@@ -1,13 +1,11 @@
-
-import Header from '@sections/Header'
-import Landing from '@sections/Landing'
-import Hero from '@sections/Hero'
-import Portfolio from '@sections/Portfolio'
-import Skills from '@sections/Skills'
-import ExperienceEducation from '@sections/ExperienceEducation'
-import AboutMeTimelineSection from '@sections/AboutMeTimelineSection'
-import ContactSection from '@sections/ContactSection' // Import the new ContactSection
-
+import AboutMeTimelineSection from "@sections/AboutMeTimelineSection";
+import ContactSection from "@sections/ContactSection"; // Import the new ContactSection
+import ExperienceEducation from "@sections/ExperienceEducation";
+import Header from "@sections/Header";
+import Hero from "@sections/Hero";
+import Landing from "@sections/Landing";
+import Portfolio from "@sections/Portfolio";
+import Skills from "@sections/Skills";
 
 function App() {
   return (
@@ -15,7 +13,7 @@ function App() {
       <Header />
       {/* Main content */}
       {/* Added pt-20 (80px) to account for fixed header height. Adjust if header height differs. */}
-      <main className="relative pt-20">
+      <main className="relative pt-20 bg-black/80 dark:bg-black/90  text-white min-h-screen">
         <Landing />
         <Hero />
         <Portfolio />

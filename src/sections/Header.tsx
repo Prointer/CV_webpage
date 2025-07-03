@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import { FaBars, FaGithub, FaTimes } from 'react-icons/fa'
-import Logo_gif from '../assets/icons8-code.gif'
-import Button from '../components/Button'
-import Modal from '../components/Modal'
+import { useState } from "react";
+import { FaBars, FaGithub, FaTimes } from "react-icons/fa";
+import Button from "../components/Button";
+import Logo from "../components/Logo"; // Adjust the path if necessary
+import Modal from "../components/Modal";
 
-const navLinks: string[] = ['About', 'Skills', 'Projects', 'Contact'];
+const navLinks: string[] = ["About", "Skills", "Projects", "Contact"];
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
@@ -14,13 +14,10 @@ const Header: React.FC = () => {
   const toggleModal = (): void => setShowModal(!showModal);
 
   return (
-    <header className="w-full fixed top-0 left-0 right-0 bg-bgbrand/80 dark:bg-bgbrand-dark/80 text-white shadow-lg z-50 transition-all duration-300 border-b border-white/20 backdrop-blur-md">
+    <header className=" flex justify-between items-center w-full fixed top-0 left-0 right-0 bg-bgbrand/80 dark:bg-bgbrand-dark/80 text-white shadow-lg z-50 transition-all duration-300  border-white/60 backdrop-blur-md ">
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-2xl font-sans tracking-wide text-brand gap-2">
-          <img src={Logo_gif} alt="Logo" className="w-8 h-8" />
-        </div>
-
+        <Logo />
         {/* Desktop nav */}
         <nav className="hidden md:flex gap-6 items-center ">
           {navLinks.map((link: string) => (
@@ -36,13 +33,14 @@ const Header: React.FC = () => {
             href="https://github.com/prointer"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-brand transition"
+            className="bg-gray-800 text-white px-2 py-2 hover:bg-teal-500 hover:font-sans hover:scale-110 hover:transition-transform duration-300 active:shadow-ml border rounded  border-gray-500 transition"
           >
-            <FaGithub size={22} />
+            <FaGithub size={24} />
           </a>
           <button
+            type="button"
             onClick={toggleModal}
-            className="bg-green-800 text-white px-4 py-1 rounded hover:bg-green-700 hover:font-sans border border-gray-500 transition hover:border-"
+            className="bg-cyan-400 easy-in text-white px-2 py-2 hover:bg-cyan-300 hover:font-bold  hover:text-black/70 hover:scale-110 transition-transform duration-300 shadow-ml border rounded  border-gray-500 transition"
           >
             Contact
           </button>
@@ -50,7 +48,7 @@ const Header: React.FC = () => {
 
         {/* Mobile toggle */}
         <div className="md:hidden">
-          <button onClick={toggleMenu} aria-label="Toggle menu">
+          <button type="button" onClick={toggleMenu} aria-label="Toggle menu">
             {menuOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
           </button>
         </div>
@@ -77,17 +75,19 @@ const Header: React.FC = () => {
           >
             GitHub
           </a>
-          <Button onClick={toggleModal} className="bg-brand text-white hover:bg-black/80 hover:text-brand-black border border-brand">
-					Contact
-					</Button>
+          <Button
+            onClick={toggleModal}
+            className="bg-brand text-white hover:bg-black/80 hover:text-brand-black border border-brand"
+          >
+            Contact
+          </Button>
         </div>
       )}
-			{/* Modal */}
-			<Modal isOpen={showModal} onClose={toggleModal} title="Связаться со мной">
-			<p>Email: example@email.com</p>
-			<p className="mt-2 text-sm text-gray-500">Форма будет позже 😎</p>
-			</Modal>
-
+      {/* Modal */}
+      <Modal isOpen={showModal} onClose={toggleModal} title="Связаться со мной">
+        <p>Email: example@email.com</p>
+        <p className="mt-2 text-sm text-gray-500">Форма будет позже 😎</p>
+      </Modal>
     </header>
   );
 };

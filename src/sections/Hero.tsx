@@ -1,7 +1,4 @@
-
 import React from "react";
-import HeroPhoto from "../assets/CV_main_photo - Edited.jpg";
-
 
 const Hero: React.FC = () => {
   return (
@@ -23,7 +20,6 @@ const Hero: React.FC = () => {
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8">
-
             I design and develop modern web interfaces with focus on
             performance, accessibility, and user experience. Using technologies
             like React, TypeScript, and Tailwind, I turn complex ideas into
@@ -49,7 +45,9 @@ const Hero: React.FC = () => {
 
         {/* Right Column: Profile Photo Area */}
         <div className="md:w-1/2 lg:w-2/5 flex justify-center md:justify-end">
-          <div className="relative group"> {/* Added group for potential group-hover effects on decals */}
+          <div className="relative group">
+            {" "}
+            {/* Added group for potential group-hover effects on decals */}
             <div
               className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto rounded-full overflow-hidden border-4 border-brand-light relative flex items-center justify-center"
               style={{
@@ -57,28 +55,27 @@ const Hero: React.FC = () => {
                   0 0 15px rgba(64, 207, 143, 0.4),
                   0 0 30px rgba(64, 207, 143, 0.3),
                   0 0 45px rgba(64, 207, 143, 0.2)
-                `
+                `,
               }}
             >
               {/* This div is for the actual image - replace span with <img> later */}
               <div className="w-full h-full bg-gray-700 dark:bg-gray-600 flex items-center justify-center">
-                <span className="text-gray-400 dark:text-gray-300 text-lg">Your Photo</span>
+                <span className="text-gray-400 dark:text-gray-300 text-lg"></span>
               </div>
             </div>
-
             {/* Placeholder Decorative Decals - Simple Circles */}
             {/* Positioned relative to the new column layout, may need further adjustment */}
             <div
               className="absolute -top-5 -left-5 w-12 h-12 sm:w-14 sm:h-14 bg-brand opacity-50 rounded-full animate-pulse"
-              style={{ animationDuration: '3s' }}
+              style={{ animationDuration: "3s" }}
             ></div>
             <div
               className="absolute -bottom-5 -right-5 w-16 h-16 sm:w-20 sm:h-20 bg-brand-light opacity-40 rounded-full animate-pulse"
-              style={{ animationDelay: '0.5s', animationDuration: '4s' }}
+              style={{ animationDelay: "0.5s", animationDuration: "4s" }}
             ></div>
             <div
               className="absolute top-0 -right-8 sm:top-2 sm:-right-10 w-8 h-8 sm:w-10 sm:h-10 border-2 border-brand-dark opacity-60 rounded-full animate-ping"
-              style={{ animationDuration: '2.5s' }}
+              style={{ animationDuration: "2.5s" }}
             ></div>
           </div>
         </div>
