@@ -10,11 +10,18 @@
   --brand-light: #008236;
   --brand-bg-buttons: rgba(64, 207, 143, 0.1);
 }
+@layer utilities {
+  ::selection {
+    color: black;
+    background-color: var(--brand-dark);
+  }
+}
 
 /* Кастомные утилиты */
 .text-brand {
   color: var(--brand);
 }
+
 .bg-brand {
   background-color: var(--bg-brand);
 }

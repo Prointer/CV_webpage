@@ -24,7 +24,7 @@ const Header: React.FC<HeaderProps> = ({ toggleModal }) => {
         </div>
 
         {/* Навигация по центру */}
-        <nav className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex gap-6 items-center box-content">
+        <nav className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex gap-10 items-center box-content">
           {navLinks.map((link: string) => (
             <a
               key={link}
