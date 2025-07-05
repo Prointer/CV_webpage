@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
         {/*LEFT: Text Section */}
         <div ref={textBlockRef} className="md:w-1/2 lg:w-3/5 text-center md:text-left mb-12 md:mb-0 md:pr-12">
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-10 leading-tight">
-            <span>Hi, I'm<br/> <span className="text-brand font-extralight whitespace-nowrap">
+            <span>Hi, I'm<br/> <span className="text-brand font-code font-extralight whitespace-nowrap">
               <Typewriter
                 words={['Vladyslav','Frontend Developer', 'UX Designer', 'Backend Developer', 'Software Engineer']}
                 loop={true}

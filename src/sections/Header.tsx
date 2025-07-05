@@ -29,7 +29,7 @@ const Header: React.FC<HeaderProps> = ({ toggleModal }) => {
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
-              className="transition font-bold text-white hover:text-green-400 hover:drop-shadow-[0_0_5px_rgba(34,197,94,0.8)]"
+              className="transition font-code text-white hover:text-green-400 hover:drop-shadow-[0_0_5px_rgba(34,197,94,0.8)] hover:scale-105"
             >
               {link}
             </a>
