@@ -14,6 +14,7 @@ const config = {
 			fontFamily:{
 				sans: ['-apple-system', 'Inter', 'system-ui', 'sans-serif'],
 			}
+      // Animation and keyframes will be defined in CSS for Tailwind v4
     }
   },
   plugins: []
