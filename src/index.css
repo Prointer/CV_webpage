@@ -59,3 +59,18 @@
   color: black;
   box-shadow: 0 0 10px rgba(64, 207, 143, 0.6);
 }
+
+/* Technology Slider Animation */
+@layer utilities {
+  @keyframes slide {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-continuous-slide {
+    animation: slide 30s linear infinite;
+  }
+}
