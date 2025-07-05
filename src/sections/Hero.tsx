@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react"
 import { Typewriter } from 'react-simple-typewriter'
 import MapSrc from "../assets/Map.png"
 import ProfileImg from "../assets/profile.jpg"
+import TechnologySlider from "../components/TechnologySlider" // Import the slider
 
 
 const Hero: React.FC = () => {
@@ -17,15 +18,21 @@ const Hero: React.FC = () => {
   }
 }, [])
 
+  const technologies = [
+    "React", "TypeScript", "Tailwind CSS", "Node.js", "Express",
+    "PostgreSQL", "Docker", "Jest", "Git", "Vite"
+  ];
+
   return (
-    <section
-      id="hero"
-      className="min-h-screen flex items-center bg-transparent dark:bg-transparent text-foreground px-4 sm:px-6 lg:px-8 py-10 md:py-10"
-    >
-      <div className="container mx-auto flex flex-col md:flex-row items-center bg-transparent dark:bg-transparent">
-        {/*LEFT: Text Section */}
-        <div ref={textBlockRef} className="md:w-1/2 lg:w-3/5 text-center md:text-left mb-12 md:mb-0 md:pr-12">
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-10 leading-tight">
+    <> {/* Use a fragment to wrap Hero and Slider */}
+      <section
+        id="hero"
+        className="min-h-screen flex items-center bg-transparent dark:bg-transparent text-foreground px-4 sm:px-6 lg:px-8 pt-10 md:pt-10" // Adjusted padding
+      >
+        <div className="container mx-auto flex flex-col md:flex-row items-center bg-transparent dark:bg-transparent">
+          {/*LEFT: Text Section */}
+          <div ref={textBlockRef} className="md:w-1/2 lg:w-3/5 text-center md:text-left mb-12 md:mb-0 md:pr-12">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-10 leading-tight">
             <span>Hi, I'm<br/> <span className="text-brand font-extralight whitespace-nowrap">
               <Typewriter
                 words={['Vladyslav','Frontend Developer', 'UX Designer', 'Backend Developer', 'Software Engineer']}
@@ -95,6 +102,8 @@ const Hero: React.FC = () => {
       </div>
       </div>
     </section>
+    <TechnologySlider technologies={technologies} /> {/* Add the slider here */}
+  </>
   )
 }
 
