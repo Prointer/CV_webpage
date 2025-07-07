@@ -1,3 +1,4 @@
+import NodeIcon from '@/assets/icons/NodeJS'
 import React, { useEffect, useRef, useState } from "react"
 import { Typewriter } from 'react-simple-typewriter'
 import ReactIcon from "../assets/icons/ReactIcon"; // Import the React icon component
@@ -27,6 +28,7 @@ const Hero: React.FC = () => {
     { name: 'TypeScript', icon: <TypeScriptSVG className='w-full h-full' /> },
     { name: 'Tailwind CSS', icon: <TailwindSVG className='w-full h-full' /> },
     { name: 'Vite', icon: <ViteSVG className='w-full h-full' /> },
+    { name: 'Node.js', icon: <NodeIcon className='w-full h-full' /> }, // Use the NodeIcon component
   ];
 
 
