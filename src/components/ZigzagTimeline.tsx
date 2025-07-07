@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"
+import React, { useEffect, useState } from "react"
 import type { JourneyEvent } from "../types/journey"; // Adjust path if needed
-import ZigzagTimelineEvent from "./ZigzagTimelineEvent"; // Adjust path if needed
 import TimelinePopup from "./TimelinePopup"; // Adjust path if needed
+import ZigzagTimelineEvent from "./ZigzagTimelineEvent"; // Adjust path if needed
 
 interface ZigzagTimelineProps {
   events: JourneyEvent[];
@@ -64,7 +64,7 @@ const ZigzagTimeline: React.FC<ZigzagTimelineProps> = ({ events }) => {
             key={event.id}
             event={event}
             alignment={
-              isSmallScreen ? "center" : index % 2 === 0 ? "left" : "right"
+              isSmallScreen ? "left" : index % 2 === 0 ? "left" : "right"
             }
             onDotClick={handleDotClick}
             isLast={index === events.length - 1}

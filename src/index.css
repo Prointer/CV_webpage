@@ -4,6 +4,7 @@
 @theme {
   --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-code: "Source Code Pro", "Office Code Pro", Menlo, monospace;
   --bg-brand: #121212;
   --brand: rgb(64, 207, 143);
   --brand-dark: #6ee7b7;
