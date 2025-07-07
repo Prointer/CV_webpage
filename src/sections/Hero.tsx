@@ -1,8 +1,12 @@
 import React, { useEffect, useRef, useState } from "react"
 import { Typewriter } from 'react-simple-typewriter'
+import ReactIcon from "../assets/icons/ReactIcon"; // Import the React icon component
+import TailwindSVG from '../assets/icons/TailwindCSS'
+import TypeScriptSVG from '../assets/icons/TS'
+import ViteSVG from '../assets/icons/Vite'
 import MapSrc from "../assets/Map.png"
 import ProfileImg from "../assets/profile.jpg"
-import TechnologySlider from "../components/TechnologySlider" // Import the slider
+import TechnologySlider from "../components/TechnologySlider"; // Import the slider
 
 
 const Hero: React.FC = () => {
@@ -19,9 +23,12 @@ const Hero: React.FC = () => {
 }, [])
 
   const technologies = [
-    "React", "TypeScript", "Tailwind CSS", "Node.js", "Express",
-    "PostgreSQL", "Docker", "Jest", "Git", "Vite"
+    { name: 'React', icon: <ReactIcon className='w-full h-full' /> }, // Pass the ReactIcon component reference
+    { name: 'TypeScript', icon: <TypeScriptSVG className='w-full h-full' /> },
+    { name: 'Tailwind CSS', icon: <TailwindSVG className='w-full h-full' /> },
+    { name: 'Vite', icon: <ViteSVG className='w-full h-full' /> },
   ];
+
 
   return (
     <>
