@@ -32,8 +32,8 @@ const ZigzagTimelineEvent: React.FC<ZigzagTimelineEventProps> = ({
   const dotHoverScale = 1.25;
   const dotTapScale = 0.9;
 
-  // Common classes for the content box
-  const contentBoxClasses =
+  // Base classes for the content box
+  const baseContentBoxClasses =
     "p-4 bg-bgbrand-light dark:bg-bgbrand-dark/80 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300";
 
   if (isCenterAligned) {
@@ -66,11 +66,12 @@ const ZigzagTimelineEvent: React.FC<ZigzagTimelineEventProps> = ({
         )}
 
         {/* Content Block - Centered below dot */}
-        <div className={`mt-4 w-full max-w-md ${contentBoxClasses}`}>
-          <p className="text-sm font-semibold text-brand dark:text-brand-light mb-1 text-center">
+        {/* Ensuring text-center is effective here */}
+        <div className={`mt-4 w-full max-w-md ${baseContentBoxClasses} text-center`}> {/* Added text-center to the box itself */}
+          <p className="text-sm font-semibold text-brand dark:text-brand-light mb-1"> {/* Removed text-center, will inherit */}
             {event.date}
           </p>
-          <h4 className="text-lg font-bold text-gray-800 dark:text-white mb-2 text-center">
+          <h4 className="text-lg font-bold text-gray-800 dark:text-white mb-2"> {/* Removed text-center, will inherit */}
             {event.title}
           </h4>
           <button
@@ -97,10 +98,11 @@ const ZigzagTimelineEvent: React.FC<ZigzagTimelineEventProps> = ({
       {/* Content Block (Left or Right) */}
       <div
         className={`w-1/2 ${
-          isLeftAligned ? "pr-10 text-right" : "pl-10 text-left order-3"
+          isLeftAligned ? "pr-10" : "pl-10 order-3" // Removed text-align from here
         }`}
       >
-        <div className={contentBoxClasses}>
+        {/* Apply text alignment to the inner content box */}
+        <div className={`${baseContentBoxClasses} ${isLeftAligned ? "text-right" : "text-left"}`}>
           <p className="text-sm font-semibold text-brand dark:text-brand-light mb-1">
             {event.date}
           </p>
@@ -111,6 +113,8 @@ const ZigzagTimelineEvent: React.FC<ZigzagTimelineEventProps> = ({
             type="button"
             onClick={() => onDotClick(event.id)}
             className="text-xs text-blue-600 dark:text-blue-400 hover:underline mt-1"
+            // Button alignment will follow text flow. If specific button positioning is needed,
+            // it might require additional classes like float or flex justification on a wrapper.
             aria-label={`View details for ${event.title}`}
           >
             Details
