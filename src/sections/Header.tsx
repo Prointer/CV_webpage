@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ toggleModal }) => {
 
   return (
     <header className="fixed top-0 left-0 right-0 w-full bg-bgbrand/80 dark:bg-bgbrand-dark/80 text-white shadow-lg z-50 border-white/60 backdrop-blur-md transition-all duration-300">
-      <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between relative">
+      <div className="max-w-6xl mx-auto px-2 py-2 flex items-center justify-between relative">
         
         {/* Логотип */}
         <div className="flex-shrink-0">

@@ -35,7 +35,7 @@ const TechnologySlider: React.FC<TechnologySliderProps> = ({ technologies }) => 
             ) : (
               <div className={iconStyles} title={tech.name}>
                 {tech.icon}
-                <div className="text-center text-xs mt-1 text-gray-500">
+                <div className="text-center text-xs mt-1 text-gray-500 py-6">
                   {tech.name}
                   </div>
               </div>

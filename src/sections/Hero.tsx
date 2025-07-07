@@ -34,12 +34,12 @@ const Hero: React.FC = () => {
     <>
       <section
         id="hero"
-        className="min-h-screen flex items-center bg-transparent dark:bg-transparent text-foreground px-4 sm:px-6 lg:px-8 py-10 md:py-10"
+        className="min-h-screen flex items-center bg-transparent dark:bg-transparent text-foreground px-2 sm:px-4 lg:px-6 py-6 md:py-6"
       >
         <div className="container mx-auto flex flex-col md:flex-row items-center bg-transparent dark:bg-transparent">
           {/*LEFT: Text Section */}
-          <div ref={textBlockRef} className="md:w-1/2 lg:w-3/5 text-center md:text-left mb-12 md:mb-0 md:pr-12">
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-10 leading-tight">
+          <div ref={textBlockRef} className="md:w-1/2 lg:w-3/5 text-center md:text-left mb-6 md:mb-0 md:pr-12">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
               <span>
                 Hi, I'm<br />
                 <span className="text-brand font-code font-extralight whitespace-nowrap">
@@ -66,6 +66,7 @@ const Hero: React.FC = () => {
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
               <button
+                onClick={toggleModal}
                 type="button"
                 className="px-8 py-3 bg-brand-dark text-white font-semibold rounded-lg shadow-md border-1 border-gray-600 hover:border-gray-400 hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-brand transition duration-150"
               >
