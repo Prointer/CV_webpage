@@ -1,5 +1,5 @@
-import React from 'react';
 
+import React from 'react'
 // Placeholder for technology icons - we can replace this with actual icons later
 const TechIconPlaceholder: React.FC<{ name: string }> = ({ name }) => (
   <div className="w-5 h-5 bg-gray-400 rounded-full text-white flex items-center justify-center text-xs" title={name}>
@@ -53,7 +53,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           {technologies.map((tech) => (
             <div
               key={tech.name}
-              className="flex items-center space-x-2 bg-brand/20 dark:bg-brand-dark/30 px-3 py-1 rounded-full"
+              className="flex items-center space-x-2 bg-brand/20 dark:bg-brand-dark/30 px-3 py-1 rounded-full font-code"
               title={tech.name}
             >
               {tech.icon || <TechIconPlaceholder name={tech.name} />}
@@ -69,7 +69,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           href={githubUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 text-center px-6 py-2 bg-gray-700 dark:bg-gray-800 text-white text-sm font-semibold rounded-lg shadow-md hover:bg-gray-600 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-75 transition duration-150 ease-in-out"
+          className="flex-1 text-center px-6 py-2 bg-gray-700 dark:bg-gray-800 text-white text-sm font-semibold rounded-lg shadow-md border-1 border-gray-600 hover:border-gray-400 hover:bg-gray-600 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-75 transition duration-150 ease-in-out"
         >
           GitHub
         </a>

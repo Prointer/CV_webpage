@@ -13,16 +13,16 @@ const TechnologySlider: React.FC<TechnologySliderProps> = ({ technologies }) => 
   const bgColor = "bg-[var(--bg-brand)]";
   const shadowColorFrom = "from-[var(--bg-brand)]";
   const iconStyles =
-    "w-[48px] h-[48px] min-w-[32px] min-h-[32px] transition-transform duration-300 hover:scale-105 hover:drop-shadow-[0_0_5px_rgba(34,197,94,0.8)]";
+    "w-[48px] h-[48px] min-w-[32px] min-h-[32px] transition-transform duration-300 hover:scale-115 hover:drop-shadow-[0_0_10px_rgba(34,197,94,0.8)]";
 
   return (
     <div className="w-full flex justify-center py-4">
-      <div className={`relative overflow-hidden rounded-xl px-4 ${bgColor}`}>
+      <div className={`relative overflow-hidden rounded-xl px-4 ${bgColor} w-[80vw] md:w-[60vw] lg:w-[40vw] xl:w-[30vw] mx-auto`}>
         {/* Shadows, теперь внутри контейнера */}
         <div className={`absolute left-0 top-0 bottom-0 w-10 bg-gradient-to-r ${shadowColorFrom} to-transparent z-10`} />
         <div className={`absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l ${shadowColorFrom} to-transparent z-10`} />
 
-        <div className="flex animate-continuous-slide gap-8 hover:[animation-play-state:paused] px-10">
+        <div className="flex animate-continuous-slide gap-12 hover:[animation-play-state:paused] px-10">
           {[...technologies, ...technologies].map((tech, index) => (
             <div key={`${tech.name}-${index}`} className="flex flex-col items-center justify-center w-[60px] my-6 ">
               <div className={iconStyles}>
@@ -32,7 +32,7 @@ const TechnologySlider: React.FC<TechnologySliderProps> = ({ technologies }) => 
                   tech.icon
                 )}
               </div>
-              <div className="text-center text-xs mt-1 text-gray-400 text-nowrap">{tech.name}</div>
+              <div className="text-center text-xs mt-2 text-gray-400 text-nowrap font-extrabold font-code">{tech.name}</div>
             </div>
           ))}
         </div>

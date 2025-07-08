@@ -24,7 +24,7 @@ const toggleModal = (): void => setShowModal(!showModal);
               <p className="mt-2 text-sm text-gray-500">Форма будет позже 😎</p>
             </Modal>
       {/* Added pt-20 (80px) to account for fixed header height. Adjust if header height differs. */}
-      <main className="relative pt-20 bg-black/80 dark:bg-black/90  text-white min-h-screen">
+      <main className="relative z-10 pt-20 bg-black/80 dark:bg-black/90  text-white min-h-screen">
         <Hero />
         <Portfolio />
         <Skills />

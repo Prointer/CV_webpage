@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { FaPlus, FaMinus } from "react-icons/fa"; // Using react-icons for expand/collapse
+import React, { useState } from "react"
+import { FaMinus, FaPlus } from "react-icons/fa"; // Using react-icons for expand/collapse
 
 export interface HardSkillCardProps {
   icon: React.ReactNode;
@@ -40,7 +40,7 @@ const HardSkillCard: React.FC<HardSkillCardProps> = ({
             )}
           </div>
         </div>
-        <h3 className="text-xl font-bold text-gray-800 dark:text-white">
+        <h3 className="text-xl font-bold  text-gray-800 dark:text-white">
           {title}
         </h3>
       </div>
