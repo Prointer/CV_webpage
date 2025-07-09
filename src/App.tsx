@@ -7,8 +7,7 @@ import Hero from "@sections/Hero"
 import Portfolio from "@sections/Portfolio"
 import Skills from "@sections/Skills"
 import { useState } from "react"
-// Main App component
-import WebGLScene from '@components/WEBGLScene'
+
 
 function App() {
 const [showModal, setShowModal] = useState<boolean>(false);
@@ -21,11 +20,11 @@ const toggleModal = (): void => setShowModal(!showModal);
       {/* Modal */}
             <Modal isOpen={showModal} onClose={toggleModal} title="Связаться со мной">
               <p className='font-extralight text-brand '>Email: vladyslav.omelianenko@gmail.com</p>
-              <p className="mt-2 text-sm text-gray-500">Форма будет позже 😎</p>
+              <p className="mt-2 text-sm text-gray-500">Form will be soon... 😎</p>
             </Modal>
-      <WebGLScene /> {/* WebGL scene can be placed here if needed, or in the Hero section */}
+     
       {/* Added pt-20 (80px) to account for fixed header height. Adjust if header height differs. */}
-      <main className="relative z-10 pt-20 bg-black/80 dark:bg-black/90  text-white min-h-screen">
+      <main className="relative z-10 bg-black/80 dark:bg-black/90  text-white min-h-screen">
         <Hero />
         <Portfolio />
         <Skills />

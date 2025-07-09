@@ -5,8 +5,6 @@ import ReactIcon from "../assets/icons/ReactIcon"; // Import the React icon comp
 import TailwindSVG from '../assets/icons/TailwindCSS'
 import TypeScriptSVG from '../assets/icons/TS'
 import ViteSVG from '../assets/icons/Vite'
-import MapSrc from "../assets/Map.png"
-import ProfileImg from "../assets/profile.jpg"
 import TechnologySlider from "../components/TechnologySlider"; // Import the slider
 
 
@@ -36,9 +34,21 @@ const Hero: React.FC = () => {
     <>
       <section
         id="hero"
-        className="min-h-screen flex items-center bg-transparent dark:bg-transparent text-foreground px-2 sm:px-4 lg:px-6 py-6 md:py-6"
+        className="relative min-h-screen flex items-center bg-transparent dark:bg-transparent text-foreground px-2 sm:px-4 lg:px-6 py-6 md:py-6 "
       >
-        <div className="container mx-auto flex flex-col md:flex-row items-center bg-transparent dark:bg-transparent">
+        {/* <video
+          autoPlay
+          muted
+          playsInline
+          
+          onEnded={() => console.log("Видео завершено")}
+          className="absolute top-0 left-0 w-full h-full object-cover z-[-1] pointer-events-none"
+        >
+          <source src="/bg-hero.mp4" type="video/mp4" />
+          Ваш браузер не поддерживает видео.
+        </video> */}
+        <div className="container mx-auto flex flex-col md:flex-row items-center bg-transparent dark:bg-transparent rounded-lg shadow-lg transition-all duration-300 p-10 md:p-16 lg:p-20 ">
+          
           {/*LEFT: Text Section */}
           <div ref={textBlockRef} className="md:w-1/2 lg:w-3/5 text-center md:text-left mb-6 md:mb-0 md:pr-12">
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
@@ -84,35 +94,15 @@ const Hero: React.FC = () => {
           </div>
 
           {/* RIGHT: Globe Map */}
-          <div className="hidden md:flex w-full md:w-1/2 justify-center relative" style={{ height: textHeight ? `${textHeight}px` : 'auto' }}>
-            <img
-              src={MapSrc}
-              alt="Europe Map"
-              className="h-full w-auto max-w-full rounded-xl pointer-events-none select-none object-contain"
-            />
-
-            {/* Katowice Point Button */}
-            <button
-              onClick={toggleModal}
-              className="absolute w-4 h-4 bg-green-400 border-2 border-white rounded-full animate-pulse shadow"
-              style={{ top: "52.5%", left: "55%" }}
-              aria-label="Katowice"
-            />
-
-            {/* Modal */}
-            {isModalOpen && (
-              <div
-                className="absolute bg-black text-white border border-brand p-4 rounded-xl shadow-xl z-50 w-64"
-                style={{ top: "54%", left: "55%" }}
-              >
-                <img
-                  src={ProfileImg}
-                  alt="Vladyslav"
-                  className="w-20 h-20 rounded-full border border-brand-light mx-auto mb-2"
-                />
-                <p className="text-center text-sm text-gray-300">Katowice, Poland</p>
-              </div>
-            )}
+          <div className="hidden md:flex w-full md:w-1/2 justify-center lg:w-2/5">
+            <div className="relative w-full h-96 md:h-[500px] lg:h-[600px]">
+              <img
+                src="/hero-img.png"
+                alt="Profile"
+                className="absolute inset-0 w-full h-full object-cover "
+              />
+    
+            </div>
           </div>
         </div>
       </section>
