@@ -1,6 +1,6 @@
-import { motion } from "framer-motion"
-import React from "react"
-import type { JourneyEvent } from "../types/journey"
+import { motion } from "framer-motion";
+import React from "react";
+import type { JourneyEvent } from "../types/journey";
 
 interface ZigzagTimelineEventProps {
   event: JourneyEvent;
@@ -13,7 +13,6 @@ const ZigzagTimelineEvent: React.FC<ZigzagTimelineEventProps> = ({
   event,
   alignment,
   onDotClick,
-  isLast,
 }) => {
   const isLeftAligned = alignment === "left";
 
@@ -42,7 +41,11 @@ const ZigzagTimelineEvent: React.FC<ZigzagTimelineEventProps> = ({
           w-full md:w-1/2 px-4
           flex flex-col
           items-center text-center
-          ${isLeftAligned ? "md:items-end md:text-right" : "md:items-start md:text-left md:order-3"}
+          ${
+            isLeftAligned
+              ? "md:items-end md:text-right"
+              : "md:items-start md:text-left md:order-3"
+          }
         `}
       >
         <div className={baseContentBoxClasses}>
