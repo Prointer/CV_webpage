@@ -1,54 +1,47 @@
 import React from "react";
-import ProjectCard from "../components/ProjectCard"; // Adjust path if necessary
 import type { ProjectCardProps } from "../components/ProjectCard";
-
-// Sample project data - replace with your actual projects
+import ProjectCard from "../components/ProjectCard"; // Adjust path if necessary
 const sampleProjects: ProjectCardProps[] = [
   {
-    projectName: "Cool Project Alpha",
+    projectName: "Landing page Tour Agency Jaboo",
     description:
-      "A brief description of Cool Project Alpha, highlighting its main features and purpose. Built with modern tech!",
-    technologies: [
-      { name: "React" },
-      { name: "TypeScript" },
-      { name: "TailwindCSS" },
-      { name: "Node.js" },
-    ],
-    screenshotUrl:
-      "https://via.placeholder.com/600x400.png?text=Project+Alpha+Screenshot", // Replace with actual screenshot
-    githubUrl: "https://github.com/yourusername/project-alpha",
+      "A responsive landing page for a fictional travel agency, built with React and vanilla JavaScript. Features a modern layout with sections like hero, destinations, and contact. Focused on clean markup, reusable components, and basic interactivity.",
+    technologies: [{ name: "React" }, { name: "JS" }, { name: "Vite" }],
+    screenshotUrl: "portfolio_1_tour_agency.png", // actual screenshot
+    githubUrl:
+      "https://github.com/Prointer/Travel-web-site/tree/main/tour-agency",
     liveUrl: "https://project-alpha.example.com",
   },
   {
-    projectName: "Awesome App Beta",
+    projectName: "Telegram BOT Smart-Chef",
     description:
-      "Awesome App Beta solves a real-world problem with an intuitive interface and robust backend.",
+      "A smart Telegram bot that helps users calculate daily calorie needs, create personal nutrition profiles, and generate meal plans based on their goals. Built with Node.js and a microservices architecture, the bot provides an interactive experience using inline buttons, user data persistence, and support for multiple languages.",
     technologies: [
-      { name: "Vue.js" },
-      { name: "Firebase" },
-      { name: "JavaScript" },
+      { name: "Node.js" },
+      { name: "PostgreSQL" },
+      { name: "Docker" },
+      { name: "Kubernetes" },
+      { name: "Express" },
+      { name: "Rest API" },
+      { name: "Telegraf" },
     ],
-    screenshotUrl:
-      "https://via.placeholder.com/600x400.png?text=App+Beta+Screenshot", // Replace with actual screenshot
-    githubUrl: "https://github.com/yourusername/app-beta",
+    screenshotUrl: "Portfolio_2_Telegram_bot.png", // actual screenshot
+    githubUrl: "https://github.com/Prointer/tg_bot_smartcchef",
     // liveUrl: undefined, // Example without a live URL
   },
   {
-    projectName: "Service Gamma",
-    description:
-      "Service Gamma provides critical infrastructure for other services. Highly scalable and reliable.",
+    projectName: "Project Coming Soon",
+    description: "This project is coming soon! Stay tuned for updates.",
     technologies: [
-      { name: "Go" },
-      { name: "Docker" },
-      { name: "Kubernetes" },
-      { name: "gRPC" },
+      { name: "React" },
+      { name: "TypeScript" },
+      { name: "PostgreSQL" },
+      { name: "API" },
     ],
-    screenshotUrl:
-      "https://via.placeholder.com/600x400.png?text=Service+Gamma+Screenshot", // Replace with actual screenshot
+    screenshotUrl: "coming_soon.png", // Replace with actual screenshot
     githubUrl: "https://github.com/yourusername/service-gamma",
     liveUrl: "https://service-gamma.example.com",
   },
-  // Add more projects as needed
 ];
 
 const Portfolio: React.FC = () => {
