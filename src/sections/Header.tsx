@@ -2,11 +2,16 @@ import { useState } from "react"
 import { FaBars, FaGithub, FaTimes } from "react-icons/fa"
 import Logo from "../components/Logo"
 
-const navLinks: string[] = ["About", "Skills", "Projects", "Contact"]
+const navLinks: navLink[] = [{name:"About", targetId:"hero"}, {name:"Skills", targetId:"skills"}, {name:"Portfolio",targetId:"portfolio"}, {name: "Contact", targetId:"contact"}];
 
 interface HeaderProps{
   toggleModal: () => void;
 }
+interface navLink{
+  name:string,
+  targetId:string
+}
+
 
 const Header: React.FC<HeaderProps> = ({ toggleModal }) => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false)
@@ -25,13 +30,13 @@ const Header: React.FC<HeaderProps> = ({ toggleModal }) => {
 
         {/* Навигация по центру */}
         <nav className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex gap-10 items-center box-content">
-          {navLinks.map((link: string) => (
+          {navLinks.map((link: navLink) => (
             <a
-              key={link}
-              href={`#${link.toLowerCase()}`}
+              key={link.name}
+              href={`#${link.targetId.toLowerCase()}`}
               className="transition font-code text-white hover:text-green-400 hover:drop-shadow-[0_0_5px_rgba(34,197,94,0.8)] hover:scale-105"
             >
-              {link}
+              {link.name}
             </a>
           ))}
         </nav>
@@ -79,14 +84,14 @@ const Header: React.FC<HeaderProps> = ({ toggleModal }) => {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden px-4 py-4 flex flex-row flex-wrap gap-6 justify-center items-center border-t border-white/30 backdrop-blur-md bg-bgbrand/80 dark:bg-bgbrand-dark/80 shadow-lg">
-          {navLinks.map((link: string) => (
+          {navLinks.map((link: navLink) => (
             <a
-              key={link}
-              href={`#${link.toLowerCase()}`}
+              key={link.name}
+              href={`#${link.targetId.toLowerCase()}`}
               className="hover:text-green-400 font-semibold px-3 py-1 rounded transition"
               onClick={() => setMenuOpen(false)}
             >
-              {link}
+              {link.name}
             </a>
           ))}
           {/* Кнопки GitHub + Contact в мобилке */}

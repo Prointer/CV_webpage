@@ -1,10 +1,10 @@
-import NodeIcon from "@/assets/icons/NodeJS";
-import React, { useRef } from "react";
-import { Typewriter } from "react-simple-typewriter";
+import NodeIcon from "@/assets/icons/NodeJS"
+import React, { useRef } from "react"
+import { Typewriter } from "react-simple-typewriter"
 import ReactIcon from "../assets/icons/ReactIcon"; // Import the React icon component
-import TailwindSVG from "../assets/icons/TailwindCSS";
-import TypeScriptSVG from "../assets/icons/TS";
-import ViteSVG from "../assets/icons/Vite";
+import TailwindSVG from "../assets/icons/TailwindCSS"
+import TypeScriptSVG from "../assets/icons/TS"
+import ViteSVG from "../assets/icons/Vite"
 import TechnologySlider from "../components/TechnologySlider"; // Import the slider
 
 interface HeroProps {
@@ -33,7 +33,7 @@ const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
     <>
       <section
         id="hero"
-        className="relative min-h-screen flex flex-col items-center bg-transparent dark:bg-transparent text-foreground px-2 sm:px-4 lg:px-6 py-10 md:py-6 "
+        className="relative lg:min-h-screen flex flex-col items-center bg-transparent dark:bg-transparent text-foreground px-2 sm:px-4 lg:px-6 py-10 md:py-6 "
       >
         {/* <video
           autoPlay
@@ -109,11 +109,11 @@ const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
             </div>
           </div>
 
-          {/* RIGHT: Globe Map */}
+          {/* RIGHT: IMG */}
           <div className="hidden md:flex w-full md:w-1/2 justify-center lg:w-2/5">
             <div className="relative w-full h-96 md:h-[500px] lg:h-[600px]">
               <img
-                src="/hero-img.png"
+                src="hero-img.png"
                 alt="Profile"
                 className="absolute inset-0 w-full h-full object-cover "
               />

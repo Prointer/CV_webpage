@@ -1,19 +1,18 @@
-import React from "react";
-import TimelineCard from "../components/TimelineCard"; // Adjust path if necessary
-import type { TimelineItem } from "../types/timeline"; // Adjust path if necessary
-
+import React from "react"
+import TimelineCard from "../components/TimelineCard"
+import type { TimelineItem } from "../types/timeline"
 // Sample Data - Replace with your actual data or fetch from a source
 const experienceData: TimelineItem[] = [
   {
     id: "exp1",
     category: "experience",
-    title: "Software Engineer Intern",
-    place: "Tech Solutions Inc.",
-    location: "San Francisco, CA",
-    dateStart: "Jun 2023",
-    dateEnd: "Aug 2023",
+    title: "Front-end developer Intern",
+    place: "YadroSoft UA",
+    location: "Kyiv, Ukraine",
+    dateStart: "July 2018",
+    dateEnd: "December 2018",
     description: [
-      "Developed new features for a flagship product using React and TypeScript.",
+      "Developed new features for a flagship product using JS and HTML, CSS.",
       "Collaborated with a team of 5 engineers in an agile environment.",
       "Contributed to bug fixing and improving application performance.",
     ],
@@ -23,14 +22,14 @@ const experienceData: TimelineItem[] = [
   {
     id: "exp2",
     category: "experience",
-    title: "Junior Web Developer",
-    place: "Creative Web Agency",
+    title: "Junior React Developer",
+    place: "CodeNest Poland",
     location: "Remote",
-    dateStart: "Jan 2022",
-    dateEnd: "May 2023",
+    dateStart: "February 2024",
+    dateEnd: "May 2024",
     description:
-      "Built and maintained client websites using HTML, CSS, JavaScript, and WordPress. Worked directly with clients to gather requirements and provide support.",
-    logoUrl: "https://via.placeholder.com/100x40.png?text=Creative+Web",
+      "Built and maintained client websites using React, TailwindCSS, and Node,js. Worked directly with clients to gather requirements and provide support.",
+    logoUrl: "logo_CodeNest.png",
   },
 ];
 
@@ -38,25 +37,47 @@ const educationData: TimelineItem[] = [
   {
     id: "edu1",
     category: "education",
-    title: "B.S. in Computer Science",
-    place: "State University",
-    location: "New York, NY",
-    dateStart: "Sep 2018",
-    dateEnd: "May 2022",
+    title: "Bachelor of Computer Science",
+    place: "Akademia WSB in Dąbrowa Górnicza",
+    location: "Dąbrowa Górnicza, PL",
+    dateStart: "September 2014",
+    dateEnd: "March 2019",
     description:
-      "Relevant coursework: Data Structures, Algorithms, Web Development, Database Management. Senior Project: Developed a full-stack web application for event management.",
-    link: "https://stateuniversity.example.edu",
+      "Coursework included Data Structures, Algorithms, Web Development, and Database Management. Final project: a third-person Unity game featuring AI-driven enemies and basic combat mechanics.",
+    link: "https://wsb.edu.pl/",
   },
   {
     id: "edu2",
     category: "education",
-    title: "Full-Stack Web Development Bootcamp",
-    place: "CodeAcademy Pro",
-    location: "Online",
-    dateStart: "Jun 2021",
-    dateEnd: "Dec 2021",
+    title: "Master of Computer Science",
+    place: "Wyższa Szkoła Kształcenia Zawodowego | WSKZ",
+    location: "Wroclaw, PL",
+    dateStart: "September 2024",
+    dateEnd: "Present",
     description:
-      "Intensive program covering MERN stack (MongoDB, Express, React, Node.js), data structures, and algorithms. Completed several individual and group projects.",
+      "Studying advanced software development with emphasis on MERN stack technologies, system design, and algorithmic thinking. Engaged in practical projects simulating real-world applications.",
+  },
+  {
+    id: "edu3",
+    category: "education",
+    title: "Postgraduate Studies: Front-end Developer",
+    place: "Wyższa Szkoła Kształcenia Zawodowego | WSKZ",
+    location: "Wroclaw, PL",
+    dateStart: "March 2023",
+    dateEnd: "March 2024",
+    description:
+      "This program provided me with a comprehensive understanding of front-end development, including advanced JavaScript, React, and modern web technologies. It was instrumental in my transition to a full-time front-end developer role.",
+  },
+  {
+    id: "edu4",
+    category: "education",
+    title: "Postgraduate Studies: Agile – Management in Organizations",
+    place: "Wyższa Szkoła Kształcenia Zawodowego | WSKZ",
+    location: "Wroclaw, PL",
+    dateStart: "April 2025",
+    dateEnd: "Present",
+    description:
+      "This program focuses on Agile methodologies and their application in organizational management, enhancing my skills in project management and team leadership.",
   },
 ];
 
@@ -64,25 +85,48 @@ const certificatesData: TimelineItem[] = [
   {
     id: "cert1",
     category: "certificates",
-    title: "Responsive Web Design",
-    place: "freeCodeCamp",
+    title: "Course of ReactJS Developer",
+    place: "ItGid",
     dateStart: "Completed",
-    dateEnd: "Mar 2021",
+    dateEnd: "March 2023",
     description:
-      "Covered HTML5, CSS3, Flexbox, CSS Grid, and responsive design principles.",
-    link: "https://www.freecodecamp.org/certification/username/responsive-web-design",
+      "During this course, I gained a deep understanding of the fundamentals of React — from creating components and managing state to routing and data management. This was a key step in my transition to modern front-end development.",
+    link: "https://www.itgid.info/ua/course/reactjs",
   },
   {
     id: "cert2",
     category: "certificates",
-    title: "JavaScript Algorithms and Data Structures",
-    place: "freeCodeCamp",
+    title: "Course of Agile Scrum Master",
+    place: "Promity Academy",
     dateStart: "Completed",
-    dateEnd: "May 2021",
+    dateEnd: "April 2022",
     description:
-      "Mastered fundamental JavaScript concepts, data structures like arrays and objects, and algorithmic thinking.",
-    link: "https://www.freecodecamp.org/certification/username/javascript-algorithms-and-data-structures",
+      "Gained foundational knowledge necessary for working as a Scrum Master in Agile methodology, including Scrum terminology, roles, Scrum reporting, and risk management.",
+    link: "/certificates/Certificate_Scrum.pdf",
   },
+  {
+    id: "cert3",
+    category: "certificates",
+    title: "Course of JavaScript 2.0",
+    place: "ItGid",
+    dateStart: "Completed",
+    dateEnd: "October 2021",
+    description:
+      "In this course, I studied the basics of JavaScript, including ES6 and asynchronous programming, which gave me a solid foundation for further growth as a frontend developer.",
+    link: "/certificates/Certificate JS2.0.pdf",
+  },
+  {
+    id: "cert4",
+    category: "certificates",
+    title: "Course Node.js",
+    place: "ItGid",
+    dateStart: "Completed",
+    dateEnd: "October 2024",
+    description:
+      "In this course, I learned the basics of Node.js, including working with Express.js and mySQL, which allowed me to create full-stack applications and understand server-side development.",
+    link: "https://www.itgid.info/ua/course/nodejs-2024",
+  },
+  
 ];
 
 const ExperienceEducation: React.FC = () => {

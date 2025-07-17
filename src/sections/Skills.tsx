@@ -1,8 +1,8 @@
-import React from "react";
+import React from "react"
+import type { HardSkillCardProps } from "../components/HardSkillCard"
 import HardSkillCard, {
   PlaceholderSkillIcon,
 } from "../components/HardSkillCard"; // Adjust path if necessary
-import type { HardSkillCardProps } from "../components/HardSkillCard";
 
 // Sample data for Hard Skills - replace with your actual skills and icons
 const sampleHardSkills: HardSkillCardProps[] = [
@@ -79,7 +79,7 @@ const Skills: React.FC = () => {
         </div>
 
         {/* Placeholder for Soft Skills Subsection - to be added in Part 2 */}
-        {/*
+        
         <div>
           <h3 className="text-2xl sm:text-3xl font-bold text-center text-brand dark:text-brand-light mb-10 md:mb-12">
             Soft Skills
@@ -88,7 +88,7 @@ const Skills: React.FC = () => {
             Soft skills coming soon...
           </p>
         </div>
-        */}
+       
       </div>
     </section>
   );

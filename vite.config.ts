@@ -4,7 +4,7 @@ import path from "path";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/cv_webpage/",
+  base: "/CV_webpage/",
   plugins: [tailwindcss(), react()],
   resolve: {
     alias: {
