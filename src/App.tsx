@@ -1,12 +1,12 @@
-import Modal from "@components/Modal";
-import AboutMeTimelineSection from "@sections/AboutMeTimelineSection";
-import ContactSection from "@sections/ContactSection"; // Import the new ContactSection
-import ExperienceEducation from "@sections/ExperienceEducation";
-import Header from "@sections/Header";
-import Hero from "@sections/Hero";
-import Portfolio from "@sections/Portfolio";
-import Skills from "@sections/Skills";
-import { useState } from "react";
+import Modal from "@components/Modal"
+import ExperienceEducation from "@sections/ExperienceEducation"
+import Footer from "@sections/Footer"
+import Header from "@sections/Header"
+import Hero from "@sections/Hero"
+import Portfolio from "@sections/Portfolio"
+import SkillsInAction from '@sections/SkillInAction'
+import Skills from "@sections/Skills"
+import { useState } from "react"
 
 function App() {
   const [showModal, setShowModal] = useState<boolean>(false);
@@ -17,7 +17,7 @@ function App() {
       <Header toggleModal={toggleModal} />
       {/* Main content */}
       {/* Modal */}
-      <Modal isOpen={showModal} onClose={toggleModal} title="Связаться со мной">
+      <Modal isOpen={showModal} onClose={toggleModal} title="Contact with me">
         <p className="font-extralight text-brand ">
           Email: vladyslav.omelianenko@gmail.com
         </p>
@@ -30,8 +30,8 @@ function App() {
         <Portfolio />
         <Skills />
         <ExperienceEducation />
-        <AboutMeTimelineSection />
-        <ContactSection /> {/* Add the ContactSection component */}
+        <SkillsInAction />
+        <Footer /> {/* Add the ContactSection component */}
         {/* Other sections can be added here */}
       </main>
     </>

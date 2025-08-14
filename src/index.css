@@ -74,3 +74,34 @@
     animation: slide 30s linear infinite;
   }
 }
+@keyframes animated-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  /* сам градиент */
+  background: linear-gradient(
+    -45deg,
+    #0f0f0f,
+    #0f1f1f,
+    #102020,
+    #3ecf8e,
+    #0f1f1f
+  );
+  background-size: 400% 400%;
+  animation: animated-gradient 120s ease infinite;
+
+  /* фиксируем фон на месте */
+  background-attachment: fixed;
+
+  /* чтобы контент был сверху */
+  color: white;
+}

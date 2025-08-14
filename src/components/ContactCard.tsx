@@ -1,108 +1,123 @@
-import { motion } from "framer-motion"; // Will be used in styling/animation step
-import React, { useState } from "react";
+import { motion } from "framer-motion"
+import React, { useEffect, useMemo, useRef, useState } from "react"
 
-// Define the props for social links
+/* Типы */
 export interface SocialLink {
-  icon: React.ReactNode; // e.g., <FaGithub />
+  icon: React.ReactNode;
   url: string;
-  label: string; // For aria-label or tooltip
+  label: string;
 }
-
-// Define the props for the ContactCard component
 export interface ContactCardProps {
   name: string;
   role: string;
   email: string;
   phone: string;
   socialLinks: SocialLink[];
+  className?: string;       // чтобы задавать размеры/отступы снаружи
 }
 
+/* Карточка без внешних бордеров/рамок. Авто-высота под контент. */
 const ContactCard: React.FC<ContactCardProps> = ({
   name,
   role,
   email,
   phone,
   socialLinks,
+  className = "",
 }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
-  const handleFlip = () => {
-    setIsFlipped(!isFlipped);
-  };
+  // refs для измерения высоты обеих сторон
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const frontRef = useRef<HTMLDivElement | null>(null);
+  const backRef = useRef<HTMLDivElement | null>(null);
+  const [height, setHeight] = useState<number | "auto">("auto");
 
-  const cardSizeClasses = "w-80 sm:w-96 h-52 sm:h-56"; // Responsive card size
-  const cardFaceBaseStyle = `absolute w-full h-full p-6 flex flex-col justify-center items-center text-center rounded-xl shadow-xl`;
+  const measure = useMemo(
+    () => () => {
+      const fh = frontRef.current?.scrollHeight ?? 0;
+      const bh = backRef.current?.scrollHeight ?? 0;
+      const max = Math.max(fh, bh);
+      if (max && typeof max === "number") setHeight(max);
+    },
+    []
+  );
+
+  useEffect(() => {
+    measure();
+    // пересчитать при ресайзе
+    const onResize = () => measure();
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, [measure]);
+
+  const toggle = () => setIsFlipped((v) => !v);
 
   return (
-    // Outer container to set perspective for 3D flip
-    // Added group class for potential future use if needed
     <div
-      className="group cursor-pointer"
+      ref={containerRef}
+      className={["relative w-full", className].join(" ")}
       style={{ perspective: "1000px" }}
-      onClick={handleFlip}
-      role="button"
-      tabIndex={0}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") handleFlip();
-      }}
-      aria-pressed={isFlipped}
-      aria-label={
-        isFlipped ? "Show front of contact card" : "Show back of contact card"
-      }
     >
-      {/* Inner container that will actually flip */}
+      {/* Внутренняя «сцена» — одна обертка, без внешних рамок */}
       <motion.div
-        className={`relative ${cardSizeClasses}`}
-        style={{ transformStyle: "preserve-3d" }}
-        initial={false} // No initial animation on load, only on state change
+        role="button"
+        tabIndex={0}
+        aria-pressed={isFlipped}
+        aria-label={isFlipped ? "Show front of contact card" : "Show back of contact card"}
+        onClick={toggle}
+        onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && toggle()}
+        className="relative w-full"
+        style={{
+          height: height === "auto" ? undefined : `${height}px`,
+          transformStyle: "preserve-3d",
+        }}
+        initial={false}
         animate={{ rotateY: isFlipped ? 180 : 0 }}
-        transition={{ duration: 0.6, ease: "easeInOut" }}
+        transition={{ duration: 0.7, ease: "easeInOut" }}
       >
-        {/* Front Face */}
-        {/* No need for individual motion.div here if the parent handles rotation */}
+        {/* FRONT */}
         <div
-          className={`${cardFaceBaseStyle} bg-bgbrand-light dark:bg-gray-800 text-gray-800 dark:text-white`}
+          ref={frontRef}
+          className="absolute inset-0 w-full h-auto p-6 sm:p-7 flex flex-col items-center justify-center text-center rounded-2xl shadow-xl bg-emerald-700/90 text-white"
           style={{ backfaceVisibility: "hidden" }}
         >
-          <h2 className="text-3xl font-bold mb-1">{name}</h2>
-          <p className="text-lg text-brand dark:text-brand-light">{role}</p>
+          <h2 className="text-lg sm:text-xl font-bold mb-1">{name}</h2>
+          <p className="text-sm sm:text-base text-white/90">{role}</p>
         </div>
 
-        {/* Back Face */}
-        {/* The back face needs to be pre-rotated if the parent is not doing it based on isFlipped */}
-        {/* Or, ensure its content is correctly oriented after parent rotation */}
+        {/* BACK */}
         <div
-          className={`${cardFaceBaseStyle} bg-brand-dark dark:bg-bgbrand-dark text-white`}
-          style={{
-            backfaceVisibility: "hidden",
-            transform: "rotateY(180deg)", // This ensures it's correctly oriented when the parent flips
-          }}
+          ref={backRef}
+          className="absolute inset-0 w-full h-auto p-6 sm:p-7 flex flex-col items-center justify-center rounded-2xl shadow-xl bg-brand-dark text-white"
+          style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
         >
-          <div className="space-y-2 text-left w-full px-4">
+          <div className="w-full space-y-2 text-left">
             <p className="text-sm">
-              <span className="font-semibold">Email:</span>
-              <a href={`mailto:${email}`} className="ml-1 hover:underline">
+              <span className="font-semibold">Email:</span>{" "}
+              <a href={`mailto:${email}`} className="hover:underline">
                 {email}
               </a>
             </p>
             <p className="text-sm">
-              <span className="font-semibold">Phone:</span>
-              <a href={`tel:${phone}`} className="ml-1 hover:underline">
+              <span className="font-semibold">Phone:</span>{" "}
+              <a href={`tel:${phone}`} className="hover:underline">
                 {phone}
               </a>
             </p>
           </div>
-          <div className="mt-6 flex justify-center space-x-5">
-            {socialLinks.map((link) => (
+
+          <div className="mt-5 flex justify-center gap-4 text-2xl">
+            {socialLinks.map((s) => (
               <a
-                key={link.label}
-                href={link.url}
+                key={s.label}
+                href={s.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={link.label}
-                className="text-white hover:text-brand-light transition-colors text-2xl" // Increased icon size
+                aria-label={s.label}
+                className="text-white/90 hover:text-brand-light transition-colors"
               >
-                {link.icon}
+                {s.icon}
               </a>
             ))}
           </div>

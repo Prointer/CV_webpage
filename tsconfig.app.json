@@ -4,7 +4,8 @@
     "paths": {
       "@/*": ["*"],
       "@components/*": ["components/*"],
-      "@sections/*": ["sections/*"]
+      "@sections/*": ["sections/*"],
+      "@assets/*":["assets/*"]
     },
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "target": "ES2022",

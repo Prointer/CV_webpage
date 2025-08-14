@@ -1,6 +1,6 @@
-import { AnimatePresence, motion } from "framer-motion";
-import React from "react";
-import { FaTimes } from "react-icons/fa";
+import { AnimatePresence, motion } from "framer-motion"
+import React from "react"
+import { FaTimes } from "react-icons/fa"
 import type { JourneyEvent } from "../types/journey"; // Adjust path if needed
 
 interface TimelinePopupProps {

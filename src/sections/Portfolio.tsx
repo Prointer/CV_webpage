@@ -1,5 +1,5 @@
-import React from "react";
-import type { ProjectCardProps } from "../components/ProjectCard";
+import React from "react"
+import type { ProjectCardProps } from "../components/ProjectCard"
 import ProjectCard from "../components/ProjectCard"; // Adjust path if necessary
 const sampleProjects: ProjectCardProps[] = [
   {
