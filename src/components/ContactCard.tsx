@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
 import React, { useEffect, useMemo, useRef, useState } from "react"
+import { GiClick } from "react-icons/gi"
 
 /* Типы */
 export interface SocialLink {
@@ -61,7 +62,7 @@ const ContactCard: React.FC<ContactCardProps> = ({
         aria-pressed={isFlipped}
         onClick={() => setIsFlipped(v => !v)}
         onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && setIsFlipped(v => !v)}
-        className="relative w-full will-change-transform [transform:translateZ(0)]"
+        className="relative w-full will-change-transform cursor-pointer [transform:translateZ(0)]"
         style={{
           height: mode === "fill" ? "100%" : (height ? `${height}px` : undefined),
           transformStyle: "preserve-3d",
@@ -75,6 +76,21 @@ const ContactCard: React.FC<ContactCardProps> = ({
           ref={frontRef}
           className="absolute inset-0 w-full h-full p-6 sm:p-7 flex flex-col items-center justify-center text-center rounded-2xl shadow-lg bg-emerald-700/90 text-white will-change-transform [backface-visibility:hidden] [transform:translateZ(0)]"
         >
+          {/* Иконка в углу */}
+          <motion.div
+            className="absolute top-[10px] right-[10px] text-2xl text-white cursor-pointer"
+            animate={{
+              opacity: [1, 0.4, 1],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: 1.2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            <GiClick />
+          </motion.div>
           <h2 className="text-lg sm:text-xl font-bold mb-1">{name}</h2>
           <p className="text-sm sm:text-base text-white/90">{role}</p>
         </div>
@@ -82,7 +98,7 @@ const ContactCard: React.FC<ContactCardProps> = ({
         {/* BACK */}
         <div
           ref={backRef}
-          className="absolute inset-0 w-full h-full p-6 sm:p-7 flex flex-col items-center justify-center rounded-2xl shadow-lg bg-brand-dark text-white will-change-transform [backface-visibility:hidden] [transform:rotateY(180deg)] [transform-style:preserve-3d]"
+          className="absolute inset-0 w-full h-full p-6 sm:p-7 flex flex-col items-center justify-center rounded-2xl shadow-lg bg-brand-dark text-white will-change-transform [backface-visibility:hidden] [transform:rotateY(180deg)] [transform-style:preserve-3d] border-2 border-white/10"
         >
           <div className="w-full space-y-2 text-left">
             <p className="text-sm"><span className="font-semibold">Email:</span>{" "}

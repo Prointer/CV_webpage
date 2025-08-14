@@ -37,6 +37,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer
+			id="footer"
       className="
         relative overflow-hidden
         border-t border-white/10
@@ -98,10 +99,10 @@ const Footer: React.FC = () => {
             {/* мини-навигация */}
             <nav className="mt-4 text-sm text-white/60">
               <ul className="flex flex-wrap gap-x-4 gap-y-2">
-                <li><a href="#projects" className="hover:text-brand">Projects</a></li>
-                <li><a href="#skills-in-action" className="hover:text-brand">Skills</a></li>
-                <li><a href="#education" className="hover:text-brand">Education</a></li>
-                <li><a href="#contact" className="hover:text-brand">Contact</a></li>
+                <li><a href="#portfolio" className="hover:text-green-400 ">Portfolio</a></li>
+                <li><a href="#skills-in-action" className="hover:text-green-400">Skills</a></li>
+                <li><a href="#experience-education" className="hover:text-green-400">Education</a></li>
+                <li><a href="#hero" className="hover:text-green-400">Hero</a></li>
               </ul>
             </nav>
 

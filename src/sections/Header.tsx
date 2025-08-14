@@ -2,7 +2,7 @@ import { useState } from "react"
 import { FaBars, FaGithub, FaTimes } from "react-icons/fa"
 import Logo from "../components/Logo"
 
-const navLinks: navLink[] = [{name:"About", targetId:"hero"}, {name:"Skills", targetId:"skills"}, {name:"Portfolio",targetId:"portfolio"}, {name: "Contact", targetId:"contact"}];
+const navLinks: navLink[] = [{name:"About", targetId:"hero"}, {name:"Skills", targetId:"skills"}, {name:"Portfolio",targetId:"portfolio"}, {name: "Contact", targetId:"footer"}];
 
 interface HeaderProps{
   toggleModal: () => void;
