@@ -3,7 +3,7 @@ import ExperienceEducation from "@sections/ExperienceEducation"
 import Footer from "@sections/Footer"
 import Header from "@sections/Header"
 import Hero from "@sections/Hero"
-import Portfolio from "@sections/Portfolio"
+import ProjectsSection from '@sections/ProjectsSection'
 import SkillsInAction from '@sections/SkillInAction'
 import Skills from "@sections/Skills"
 import { useState } from "react"
@@ -27,7 +27,7 @@ function App() {
       {/* Added pt-20 (80px) to account for fixed header height. Adjust if header height differs. */}
       <main className="relative z-10 bg-black/80 dark:bg-black/90  text-white min-h-screen">
         <Hero onContactClick={toggleModal} />
-        <Portfolio />
+        <ProjectsSection />
         <Skills />
         <ExperienceEducation />
         <SkillsInAction />

@@ -85,13 +85,14 @@ const StatsSection: React.FC<StatsSectionProps> = ({
   className = "",
 }) => {
   return (
-    <section className={`w-full px-4 mt-8 md:mt-12 lg:mt-16 ${className}`}>
+    <section className={`w-full px-4 mt-2 md:mt-4 lg:mt-6 ${className}`}>
       <div
         className="
           container mx-auto
           grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8
           justify-items-center text-center
           max-w-5xl motion-safe:animate-[fadeInUp_600ms_ease-out_forwards]
+          mb-20
         "
       >
         {/* На маленьких экранах третий айтем растягиваем на 2 колонки для ровного центра */}

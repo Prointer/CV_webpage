@@ -38,7 +38,6 @@ const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
             relative flex flex-col items-center bg-transparent text-foreground
             px-2 sm:px-4 lg:px-6
             pt-[calc(var(--header-h)+10px)]
-            lg:min-h-screen
           ">
         <div
           className="
