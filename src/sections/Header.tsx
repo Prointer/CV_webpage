@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { FaBars, FaGithub, FaTimes } from "react-icons/fa"
 import Logo from "../components/Logo"
 
@@ -15,12 +15,31 @@ interface navLink{
 
 const Header: React.FC<HeaderProps> = ({ toggleModal }) => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false)
+  const headerRef = useRef<HTMLElement | null>(null);
 
-  const toggleMenu = (): void => setMenuOpen(!menuOpen)
+  // initially set the header height variable
+  useEffect(() => {
+    const setVar = () =>{
+      if (!headerRef.current) return;
+      const h =headerRef.current.offsetHeight
+      document.documentElement.style.setProperty('--header-h', `${h}px`);
+    };
+    setVar();
+    const onResize = () => setVar();
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  },[]);
 
+  useEffect(()=>{
+    if(!headerRef.current) return;
+    const h = headerRef.current.offsetHeight;
+    document.documentElement.style.setProperty('--header-h', `${h}px`);
+  },[menuOpen])
+
+  const toggleMenu = (): void => setMenuOpen((v)=>!v)
 
   return (
-    <header className="fixed top-0 left-0 right-0 w-full bg-bgbrand/80 dark:bg-bgbrand-dark/80 text-white shadow-lg z-50 border-white/60 backdrop-blur-md transition-all duration-300">
+    <header ref={headerRef} className="fixed top-0 left-0 right-0 w-full bg-bgbrand/80 dark:bg-bgbrand-dark/80 text-white shadow-lg z-50 border-white/60 backdrop-blur-md transition-all duration-300">
       <div className="max-w-6xl mx-auto px-2 py-2 flex items-center justify-between relative">
         
         {/* Логотип */}

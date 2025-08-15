@@ -31,7 +31,6 @@ const ContactCard: React.FC<ContactCardProps> = ({
   const [isFlipped, setIsFlipped] = useState(false);
 
   // refs для измерения высоты обеих сторон
-  const containerRef = useRef<HTMLDivElement | null>(null);
   const frontRef = useRef<HTMLDivElement | null>(null);
   const backRef = useRef<HTMLDivElement | null>(null);
   const [height, setHeight] = useState<number | "auto">("auto");
@@ -53,7 +52,7 @@ const ContactCard: React.FC<ContactCardProps> = ({
     return () => window.removeEventListener("resize", onResize);
   }, [measure]);
 
-  const toggle = () => setIsFlipped((v) => !v);
+
 
   return (
      <div className={["relative w-full", className].join(" ")} style={{ perspective: "1000px" }}>
