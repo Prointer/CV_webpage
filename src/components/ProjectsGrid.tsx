@@ -21,12 +21,12 @@ export type Project = {
 	icon?: React.ReactNode;
 };
 
-/* ====== Helpers ====== */
-const sizeToClasses: Record<Size, string> = {
-  base: "col-span-12 sm:col-span-6 lg:col-span-4",
-  wide: "col-span-12 lg:col-span-8",
-  tall: "col-span-12 sm:col-span-6 lg:col-span-4 lg:row-span-2",
-};
+// /* ====== Helpers ====== */
+// const sizeToClasses: Record<Size, string> = {
+//   base: "col-span-12 sm:col-span-6 lg:col-span-4",
+//   wide: "col-span-12 lg:col-span-8",
+//   tall: "col-span-12 sm:col-span-6 lg:col-span-4 lg:row-span-2",
+// };
 
 // Fallback cover с центральной SVG-иконкой, которая красится на hover
 const FallbackCover: React.FC<{ icon?: React.ReactNode }> = ({ icon }) => (
