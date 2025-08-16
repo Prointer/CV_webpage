@@ -133,7 +133,7 @@ const ExperienceEducation: React.FC = () => {
   return (
     <section
       id="experience-education"
-      className="py-16 md:py-24 bg-bgbrand dark:bg-bgbrand-dark"
+      className="py-16 md:py-24 glass rounded-xl"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-gray-800 dark:text-white mb-16 md:mb-20">
@@ -147,8 +147,6 @@ const ExperienceEducation: React.FC = () => {
               Experience
             </h3>
             <div className="relative space-y-8">
-              {/* Optional: A connecting line for visual flair, can be enhanced later */}
-              {/* <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-0.5 bg-gray-300 dark:bg-gray-700 transform sm:-translate-x-1/2"></div> */}
               {experienceData.map((item) => (
                 <TimelineCard key={item.id} item={item} />
               ))}

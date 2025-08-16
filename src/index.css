@@ -1,75 +1,89 @@
 @import "tailwindcss";
 
-/* ─────────────────────────────────────────────
-   ТЁМНАЯ ТЕМА + БРЕНД (Tailwind v4 tokens)
-   ───────────────────────────────────────────── */
+/* ── ТЁМНАЯ ТЕМА + БРЕНД (Tailwind v4 tokens) ───────────────────────── */
 @theme {
-  /* цвета */
-  --color-bg: #121212;        /* базовый фон сайта */
-  --color-surface: rgba(255,255,255,0.05); /* полу‑прозрачные поверхности */
-  --color-brand: #40CF8F;     /* фирменный зелёный */
+  --color-bg: #121212;                     /* базовый фон */
+  --color-surface: rgba(255,255,255,0.05); /* стеклянные поверхности */
+  --color-brand: #40CF8F;                  /* зелёный бренд */
 
-  /* шрифты */
   --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
   --font-code: "Source Code Pro", Menlo, Consolas, monospace;
 
-  /* радиусы и тени (по желанию) */
   --radius-xl: 1rem;
 }
+:root { color-scheme: dark; --header-h: 64px; }
 
-/* системная тема — тёмная */
-:root { color-scheme: dark; }
-:root { --header-h: 64px; }
+/* базовый слой документа */
+html { background: var(--color-bg); color: white; }
+body { background: transparent; position: relative; z-index: 0; }
+/* контент всегда над фоном */
+#root, #app, #__next { position: relative; z-index: 1; }
 
-/* базовые цвета документа */
-html, body {
-  background: var(--color-bg);
-  color: white;
-  font-family: var(--font-sans);
+/* ── ПАРАМЕТРЫ ГРАДИЕНТА (можно крутить) ───────────────────────────── */
+:root{
+  --grad-angle: -45deg;
+  --grad-speed: 60s;         /* скорость анимации (меньше — быстрее) */
+  --grad-size: 300% 300%;    /* “волнистость” (200–500%) */
+  --grad-a: #0f0f0f;
+  --grad-b: #0f1f1f;
+  --grad-c: #102020;
+  --grad-accent: #3ecf8e;    /* было ближе к #3ecf8e — оставил спокойнее */
 }
 
-/* фон с плавным градиентом (остался, но под тёмную тему) */
+/* ── АНИМИРОВАННЫЙ ДИАГОНАЛЬНЫЙ ГРАДИЕНТ (как в самом начале) ──────── */
 @keyframes animated-gradient {
   0%   { background-position: 0% 50%; }
   50%  { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-body {
-  background-image: linear-gradient(-45deg, #0f0f0f, #0f1f1f, #102020, #183c2e, #0f1f1f);
-  background-size: 400% 400%;
-  animation: animated-gradient 120s ease infinite;
-  background-attachment: fixed;
+
+body::before{
+  content: "";
+  position: fixed;
+  inset: -10%;
+  z-index: 0;                /* между html и контентом */
+  pointer-events: none;
+
+  background-image: linear-gradient(
+    var(--grad-angle),
+    var(--grad-a),
+    var(--grad-b),
+    var(--grad-c),
+    var(--grad-accent),
+    var(--grad-b)
+  );
+  background-size: var(--grad-size);
+  animation: animated-gradient var(--grad-speed) ease infinite;
+  will-change: background-position;
 }
+
+/* уважение к системной настройке */
+@media (prefers-reduced-motion: reduce){
+  body::before{ animation: none; }
+}
+
+/* ── УТИЛИТЫ ────────────────────────────────────────────────────────── */
 
 /* выделение текста */
 @layer utilities {
-  ::selection {
-    color: black;
-    background-color: var(--color-brand);
-  }
+  ::selection { color: black; background-color: var(--color-brand); }
 }
-
-/* ─────────────────────────────────────────────
-   УТИЛИТЫ ПОД ТЁМНУЮ ТЕМУ
-   ───────────────────────────────────────────── */
 
 /* стеклянная карточка/хедер */
 @utility glass {
   @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-lg;
 }
 
-/* брендовые кнопки */
+/* кнопки */
 @utility btn-brand {
-  @apply bg-brand text-black font-semibold rounded-lg
-         px-4 py-2 transition hover:opacity-90;
+  @apply bg-brand text-black font-semibold rounded-lg px-4 py-2 transition hover:opacity-90;
 }
 @utility btn-muted {
-  @apply bg-white/10 text-white/90 rounded-lg
-         px-4 py-2 transition hover:bg-white/15;
+  @apply bg-white/10 text-white/90 rounded-lg px-4 py-2 transition hover:bg-white/15;
 }
 
-/* кастомная кнопка “полупрозрачная брендовая” */
+/* полупрозрачная бренд-кнопка (кастом) */
 .color-button {
   background-color: color-mix(in oklab, var(--color-brand) 15%, transparent);
   color: var(--color-brand);
@@ -90,13 +104,13 @@ body {
     0 0 45px color-mix(in oklab, var(--color-brand) 20%, transparent);
 }
 
-/* keyframes для слайдера технологий */
+/* бесконечный слайдер технологий */
 @layer utilities {
   @keyframes slide { from { transform: translateX(0%); } to { transform: translateX(-50%); } }
   .animate-continuous-slide { animation: slide 30s linear infinite; }
 }
 
-/* лёгкий fade-in снизу (для статистики/секций) */
+/* лёгкий fade-in снизу (для секций) */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: translateY(0); }

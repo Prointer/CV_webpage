@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({ toggleModal }) => {
   const toggleMenu = (): void => setMenuOpen((v)=>!v)
 
   return (
-    <header ref={headerRef} className="fixed top-0 left-0 right-0 w-full bg-bgbrand/80 dark:bg-bgbrand-dark/80 text-white shadow-lg z-50 border-white/60 backdrop-blur-md transition-all duration-300">
+    <header ref={headerRef} className="fixed top-0 left-0 right-0 w-full text-white shadow-lg z-50 border-b border-white/10 bg-black/40 backdrop-blur-md transition-all duration-300">
       <div className="max-w-6xl mx-auto px-2 py-2 flex items-center justify-between relative">
         
         {/* Логотип */}
@@ -72,7 +72,7 @@ const Header: React.FC<HeaderProps> = ({ toggleModal }) => {
           </a>
           <button
             type="button"
-            onClick={toggleModal} className="relative px-4 py-2 text-sm font-bold text-sky-400 border-2 border-dashed border-sky-400 bg-bgbrand hover:bg-sky-400/10 transition-all duration-300"
+            onClick={toggleModal} className="relative px-4 py-2 text-sm font-bold text-sky-400 border-2 border-dashed border-sky-400 hover:bg-sky-400/10 transition-all duration-300"
           >
             <span className="z-10 relative">Contact</span>
                   
@@ -102,7 +102,7 @@ const Header: React.FC<HeaderProps> = ({ toggleModal }) => {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden px-4 py-4 flex flex-row flex-wrap gap-6 justify-center items-center border-t border-white/30 backdrop-blur-md bg-bgbrand/80 dark:bg-bgbrand-dark/80 shadow-lg">
+        <div className="md:hidden px-4 py-4 flex flex-row flex-wrap gap-6 justify-center items-center border-t border-white/30 backdrop-blur-md shadow-lg">
           {navLinks.map((link: navLink) => (
             <a
               key={link.name}

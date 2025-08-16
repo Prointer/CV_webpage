@@ -97,7 +97,7 @@ const ContactCard: React.FC<ContactCardProps> = ({
         {/* BACK */}
         <div
           ref={backRef}
-          className="absolute inset-0 w-full h-full p-6 sm:p-7 flex flex-col items-center justify-center rounded-2xl shadow-lg bg-brand-dark text-white will-change-transform [backface-visibility:hidden] [transform:rotateY(180deg)] [transform-style:preserve-3d] border-2 border-white/10"
+          className="absolute inset-0 w-full h-full p-6 sm:p-7 flex flex-col items-center justify-center rounded-2xl shadow-lg text-white will-change-transform [backface-visibility:hidden] [transform:rotateY(180deg)] [transform-style:preserve-3d] border-2 border-white/10"
         >
           <div className="w-full space-y-2 text-left">
             <p className="text-sm"><span className="font-semibold">Email:</span>{" "}

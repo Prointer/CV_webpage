@@ -1,10 +1,9 @@
 import React from "react"
 
 /* ====== Токены под бренд ====== */
-const GLASS =
-  "bg-white/5 dark:bg-white/5 backdrop-blur-md border border-white/10 shadow-lg";
+
 const BRAND = "text-brand";
-const BRAND_BG = "bg-brand";
+
 
 /* ====== Types ====== */
 type Size = "base" | "wide" | "tall";
@@ -115,7 +114,7 @@ const ProjectCard: React.FC<{ p: Project }> = ({ p }) => {
             href={p.liveUrl}
             target="_blank"
             rel="noreferrer"
-            className={`inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium ${BRAND_BG} text-black hover:opacity-90 transition`}
+            className={`inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium text-black hover:opacity-90 transition`}
             aria-label={`Open live demo of ${p.title}`}
           >
             Live Demo ↗

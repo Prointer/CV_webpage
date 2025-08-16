@@ -113,7 +113,7 @@ const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
                   className="
                     w-full sm:w-auto sm:min-w-[220px]
                     px-6 py-3
-                    bg-brand-dark text-white font-semibold rounded-lg shadow-md
+                     text-white font-semibold rounded-lg shadow-md
                     border border-gray-600 hover:border-gray-400 hover:bg-opacity-90
                     focus:outline-none focus:ring-2 focus:ring-brand
                     transition text-[clamp(14px,2.2vw,16px)]

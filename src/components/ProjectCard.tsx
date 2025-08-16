@@ -30,7 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   liveUrl,
 }) => {
   return (
-    <div className="bg-bgbrand-light dark:bg-bgbrand-dark/50 p-5 border-2 border-gray-400 dark:border-brand-light rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out flex flex-col h-full">
+    <div className="p-5 border-2 border-gray-400 dark:border-brand-light rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out flex flex-col h-full">
       {/* Screenshot */}
       <div className="mb-4 rounded-lg overflow-hidden">
         <img
