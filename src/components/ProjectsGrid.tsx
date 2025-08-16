@@ -114,7 +114,7 @@ const ProjectCard: React.FC<{ p: Project }> = ({ p }) => {
             href={p.liveUrl}
             target="_blank"
             rel="noreferrer"
-            className={`inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium text-black hover:opacity-90 transition`}
+            className={`inline-flex items-center justify-center bg-brand rounded-lg px-4 py-2 text-sm font-medium text-black hover:opacity-90 transition hover:shadow-emerald-300/30 hover:shadow-lg`}
             aria-label={`Open live demo of ${p.title}`}
           >
             Live Demo ↗
@@ -178,17 +178,15 @@ const ProjectsGrid: React.FC<GridProps> = ({ projects, className = "", title = "
         </header>
 
         <div
-          className="
-            grid grid-cols-12 gap-4 sm:gap-5 lg:gap-6
-            auto-rows-[minmax(180px,auto)]
-          "
-        >
-          {projects.map((p) => (
-            <div key={p.id} className={sizeToClasses[p.size ?? "base"]}>
-              <ProjectCard p={p} />
-            </div>
-          ))}
-        </div>
+  className="
+    grid gap-4 sm:gap-5 lg:gap-6
+    grid-cols-[repeat(auto-fit,minmax(280px,1fr))]
+  "
+>
+  {projects.map((p) => (
+    <ProjectCard key={p.id} p={p} />
+  ))}
+</div>
       </div>
     </section>
   );

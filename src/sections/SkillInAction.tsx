@@ -1,5 +1,5 @@
 // src/sections/SkillsInAction.tsx
-import IconAPI from "@assets/icons/IconAPI"
+import { IconAPIv2 } from "@assets/icons/IconAPIv2"
 import IconAuth from "@assets/icons/IconAuth"
 import IconDB from "@assets/icons/IconDB"
 import IconDeploy from "@assets/icons/IconDeploy"
@@ -43,7 +43,7 @@ const skills: Skill[] = [
     desc:
       "Интеграция REST/GraphQL, кеширование, ретраи с экспоненциальной задержкой и circuit‑breaker.",
     badges: ["REST", "GraphQL", "Caching"],
-		icon: <IconAPI />,
+		icon: <IconAPIv2 className='text-brand' />,
   },
   {
     title: "Real‑time UX",
