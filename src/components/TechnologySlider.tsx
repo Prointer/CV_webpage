@@ -10,15 +10,15 @@ interface TechnologySliderProps {
 }
 
 const TechnologySlider: React.FC<TechnologySliderProps> = ({ technologies }) => {
-  const bgColor = "bg-[var(--bg-brand)]";
-  const shadowColorFrom = "from-[var(--bg-brand)]";
+  const bgColor = "bg-[transparent]";
+  const shadowColorFrom = "from-[transparent]";
   const iconStyles =
     "w-[48px] h-[48px] min-w-[32px] min-h-[32px] transition-transform duration-300 hover:scale-115 hover:drop-shadow-[0_0_10px_rgba(34,197,94,0.8)]";
   return (
     <div className="w-full flex flex-col justify-center items-center py-4 gap-8">
-      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-white">Technologies I Work With</h2>
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-white">Technologies stack</h2>
       {/* Slider Container */}
-      <div className={`relative overflow-hidden rounded-xl px-4 ${bgColor} w-[80vw] md:w-[60vw] lg:w-[40vw] xl:w-[30vw] mx-auto`}>
+      <div className={`relative overflow-hidden rounded-xl px-4 ${bgColor} w-[80vw] md:w-[60vw] lg:w-[40vw] xl:w-[30vw] mx-auto tech-track`}>
         {/* Shadows, теперь внутри контейнера */}
         <div className={`absolute left-0 top-0 bottom-0 w-10 bg-gradient-to-r ${shadowColorFrom} to-transparent z-10`} />
         <div className={`absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l ${shadowColorFrom} to-transparent z-10`} />
