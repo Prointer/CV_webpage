@@ -1,43 +1,47 @@
 import React from "react"
+import { BiLogoTypescript } from 'react-icons/bi'
+import { FaGithubSquare, FaJsSquare, FaNodeJs, FaReact } from 'react-icons/fa'
+import { RiTailwindCssFill } from 'react-icons/ri'
 import type { HardSkillCardProps } from "../components/HardSkillCard"
 import HardSkillCard, {
   PlaceholderSkillIcon,
 } from "../components/HardSkillCard"; // Adjust path if necessary
 
+
 // Sample data for Hard Skills - replace with your actual skills and icons
 const sampleHardSkills: HardSkillCardProps[] = [
   {
-    icon: <PlaceholderSkillIcon bgColor="bg-blue-500" />, // React
+    icon: <PlaceholderSkillIcon bgColor="bg-blue-500" icon={<FaReact/>} />, // React
     title: "React",
     description:
       "Proficient in building dynamic and responsive user interfaces with React. Experienced with hooks, context API, and component-based architecture. Used in most of my frontend projects.",
   },
   {
-    icon: <PlaceholderSkillIcon bgColor="bg-yellow-500" />, // JavaScript
+    icon: <PlaceholderSkillIcon bgColor="bg-yellow-500" icon={<FaJsSquare/>} />, // JavaScript
     title: "JavaScript (ES6+)",
     description:
       "Strong understanding of modern JavaScript features, asynchronous programming, and DOM manipulation. Capable of writing clean, efficient, and maintainable code.",
   },
   {
-    icon: <PlaceholderSkillIcon bgColor="bg-sky-500" />, // Tailwind CSS
+    icon: <PlaceholderSkillIcon bgColor="bg-sky-500" icon={<RiTailwindCssFill/>} />, // Tailwind CSS
     title: "Tailwind CSS",
     description:
       "Skilled in utility-first CSS framework for rapidly building custom designs. Comfortable with responsive design, dark mode, and customization via tailwind.config.js.",
   },
   {
-    icon: <PlaceholderSkillIcon bgColor="bg-green-600" />, // Node.js
+    icon: <PlaceholderSkillIcon bgColor="bg-green-600" icon={<FaNodeJs/>} />, // Node.js
     title: "Node.js",
     description:
       "Experience in developing backend services and APIs using Node.js and Express. Familiar with RESTful principles and asynchronous patterns.",
   },
   {
-    icon: <PlaceholderSkillIcon bgColor="bg-red-500" />, // Git
+    icon: <PlaceholderSkillIcon bgColor="bg-red-500" icon={<FaGithubSquare/>} />, // Git
     title: "Git & GitHub",
     description:
       "Proficient with version control using Git, including branching, merging, rebasing, and collaborating effectively through platforms like GitHub.",
   },
   {
-    icon: <PlaceholderSkillIcon bgColor="bg-indigo-500" />, // TypeScript
+    icon: <PlaceholderSkillIcon bgColor="bg-indigo-500" icon={<BiLogoTypescript/>}/>, // TypeScript
     title: "TypeScript",
     description:
       "Using TypeScript to enhance JavaScript projects with static typing, improving code quality, maintainability, and developer experience.",

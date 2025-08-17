@@ -20,7 +20,7 @@ const HardSkillCard: React.FC<HardSkillCardProps> = ({
 
   return (
     <div
-      className="p-6 rounded-xl shadow-md hover:shadow-lg dark:hover:shadow-brand/40 dark:hover:shadow-md transition-all duration-300 ease-in-out group flex flex-col"
+      className="p-6 rounded-xl shadow-md hover:shadow-lg  transition-all duration-300 ease-in-out group flex flex-col"
       // For a more pronounced glow, you might use something like:
       // hover:shadow-[0_0_15px_5px_rgba(64,207,143,0.5)] dark:hover:shadow-[0_0_15px_5px_rgba(64,207,143,0.7)]
     >
@@ -40,7 +40,7 @@ const HardSkillCard: React.FC<HardSkillCardProps> = ({
             )}
           </div>
         </div>
-        <h3 className="text-xl font-bold  text-gray-800 dark:text-white">
+        <h3 className="text-xl font-bold  text-white">
           {title}
         </h3>
       </div>
@@ -57,7 +57,7 @@ const HardSkillCard: React.FC<HardSkillCardProps> = ({
         <div className="pt-2">
           {" "}
           {/* Add some padding when expanded */}
-          <p className="text-sm text-gray-700 dark:text-gray-300">
+          <p className="text-sm text-gray-300">
             {description}
           </p>
         </div>
@@ -67,7 +67,7 @@ const HardSkillCard: React.FC<HardSkillCardProps> = ({
       <button
         type="button"
         onClick={toggleExpand}
-        className="mt-auto text-sm flex items-center self-start py-2 px-3 rounded-md text-brand-dark dark:text-brand-light hover:bg-brand/10 dark:hover:bg-brand-dark/20 focus:outline-none focus:ring-2 focus:ring-brand dark:focus:ring-brand-light transition-colors duration-200"
+        className="mt-auto text-sm flex items-center self-start py-2 px-3 rounded-md text-brand hover:bg-brand/80 hover:text-white  transition-colors duration-200"
         aria-expanded={isExpanded}
         aria-controls={`skill-description-${title.replace(/\s+/g, "-")}`}
       >
@@ -83,13 +83,14 @@ const HardSkillCard: React.FC<HardSkillCardProps> = ({
 };
 
 // Placeholder Icon for sample data - replace with actual SVGs or react-icons
-export const PlaceholderSkillIcon: React.FC<{ bgColor?: string }> = ({
+export const PlaceholderSkillIcon: React.FC<{ bgColor?: string, icon?:React.ReactNode }> = ({
   bgColor = "bg-brand",
+  icon = "S",
 }) => (
   <div
     className={`w-full h-full ${bgColor} rounded-md flex items-center justify-center text-white font-bold text-xl p-1`}
   >
-    S
+    {icon}
   </div>
 );
 
