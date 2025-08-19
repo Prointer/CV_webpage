@@ -1,20 +1,21 @@
-export type TimelineCategory = 'experience' | 'education' | 'certificates';
+export type TimelineCategory = 'experience' | 'education' | 'certificates'
 
 export interface TimelineItemSharedProps {
-  title: string;
-  place: string; // Company, University, Platform
-  dateStart: string; // Could be a string like "YYYY-MM" or a full date. Consider Date object if complex parsing needed.
-  dateEnd: string; // Same as dateStart, or "Present" / "Current"
-  description: string | string[]; // Single string or array of achievement/description points
-  location?: string;
-  link?: string; // URL to company, project, certificate, etc.
-  logoUrl?: string; // URL for a logo image
+	title: string
+	place: string // Company, University, Platform
+	dateStart: string // Could be a string like "YYYY-MM" or a full date. Consider Date object if complex parsing needed.
+	dateEnd: string // Same as dateStart, or "Present" / "Current"
+	description?: string | string[] // Single string or array of achievement/description points
+	descriptionKey?: string
+	location?: string
+	link?: string // URL to company, project, certificate, etc.
+	logoUrl?: string // URL for a logo image
 }
 
 // If all categories share these exact props plus a category type:
 export interface TimelineItem extends TimelineItemSharedProps {
-  id: string; // Unique ID for mapping and keys
-  category: TimelineCategory;
+	id: string // Unique ID for mapping and keys
+	category: TimelineCategory
 }
 
 // Alternatively, if categories might have more distinct props in the future:

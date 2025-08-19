@@ -1,0 +1,230 @@
+{
+	"header": {
+		"nav": {
+			"about": "About",
+			"skills": "Skills",
+			"portfolio": "Portfolio",
+			"contact": "Contact",
+			"education": "Education"
+		},
+		"buttons": {
+			"contactMe": "Contact"
+		}
+	},
+	"hero": {
+		"greetingPrefix": "Hi, I'm",
+		"typewriterWords": [
+			"Vladyslav!",
+			"Frontend Developer!",
+			"UX Designer!",
+			"Backend Developer!",
+			"Software Engineer!"
+		],
+		"subtitle": {
+			"part1": "Focused on ",
+			"ux": "user experience",
+			"performance": "performance",
+			"comma2": ", and maintainable frontend",
+			"architecture": "architecture"
+		},
+		"paragraph": {
+			"line1": "My journey from student to developer shaped how I build for people.",
+			"line2": "I use the tools best suited for the job to create web interfaces that feel natural, responsive, and easy to use."
+		},
+		"buttons": {
+			"contactMe": "Contact",
+			"downloadCV": "Download CV"
+		},
+		"statsSection": {
+			"experience": "Years of Experience",
+			"completedProjects": "Projects Completed",
+			"satisfiedClients": "Satisfied Clients"
+		},
+		"technologiesSlider": {
+			"title": "Technology stack"
+		}
+	},
+	"projects": {
+		"buttons": {
+			"privateRepo": "Private repo",
+			"liveDemo": "Live Demo",
+			"noLiveDemo": "No live demo",
+			"unavailableRepo": "Repo unavailable"
+		},
+		"content": {
+			"title": "Projects"
+		},
+		"cards": {
+			"resume": {
+				"description": "Personal single‑page resume site with dark minimal theme, i18n and animated hero."
+			},
+			"nails": {
+				"description": "Landing page for beauty salon with booking via Booksy, custom grid gallery and SEO."
+			},
+			"smartchef": {
+				"description": "Telegram bot microservices: user profiles, meal planner, calorie goals."
+			},
+			"weather": {
+				"description": "Animated weekly forecast with API, tests, and themed backgrounds."
+			}
+		}
+	},
+	"skills": {
+		"title": "My Skills",
+		"hardSkills": {
+			"react": {
+				"description": "Proficient in building dynamic and responsive user interfaces with React. Experienced with hooks, context API, and component-based architecture. Used in most of my frontend projects."
+			},
+			"jsEs6": {
+				"description": "Strong understanding of modern JavaScript features, asynchronous programming, and DOM manipulation. Capable of writing clean, efficient, and maintainable code."
+			},
+			"tailwindCss": {
+				"description": "Skilled in utility-first CSS framework for rapidly building custom designs. Comfortable with responsive design, dark mode, and customization via tailwind.config.js."
+			},
+			"nodeJs": {
+				"description": "Experience in developing backend services and APIs using Node.js and Express. Familiar with RESTful principles and asynchronous patterns."
+			},
+			"git": {
+				"description": "Proficient with version control using Git, including branching, merging, rebasing, and collaborating effectively through platforms like GitHub."
+			},
+			"ts": {
+				"description": "Using TypeScript to enhance JavaScript projects with static typing, improving code quality, maintainability, and developer experience."
+			},
+			"buttons": {
+				"hide": "Show Less",
+				"show": "Learn More"
+			}
+		},
+		"softSkills": {
+			"title": "Soft Skills",
+			"name": {
+				"teamwork": "Teamwork",
+				"leadership": "Leadership",
+				"creativity": "Creativity",
+				"timeManagement": "Time Management",
+				"problemSolving": "Problem-Solving",
+				"adaptability": "Adaptability"
+			}
+		}
+	},
+	"experience": {
+		"title": "My Journey",
+		"subtitle": {
+			"experience": "Experience",
+			"education": "Education",
+			"certificates": "Certificates"
+		},
+		"cards": {
+			"buttonInfo": "Learn More",
+			"work1": {
+				"title": "Front-end developer Intern",
+				"dateStart": "July 2018",
+				"dateEnd": "December 2018",
+				"place": "Kyiv, Ukraine",
+				"description": [
+					"Developed new features for a flagship product using JS and HTML, CSS.",
+					"Collaborated with a team of 5 engineers in an agile environment.",
+					"Contributed to bug fixing and improving application performance."
+				]
+			},
+			"work2": {
+				"title": "Junior React Developer",
+				"dateStart": "February 2024",
+				"dateEnd": "May 2024",
+				"place": "Remote",
+				"description": "Built and maintained client websites using React, TailwindCSS, and Node,js. Worked directly with clients to gather requirements and provide support."
+			},
+			"edu1": {
+				"title": "Bachelor of Computer Science",
+				"dateStart": "September 2014",
+				"dateEnd": "March 2019",
+				"place": "Dąbrowa Górnicza, PL",
+				"description": "Coursework included Data Structures, Algorithms, Web Development, and Database Management. Final project: a third-person Unity game featuring AI-driven enemies and basic combat mechanics."
+			},
+			"edu2": {
+				"title": "Master of Computer Science",
+				"dateStart": "September 2024",
+				"dateEnd": "Present",
+				"place": "Wroclaw, PL",
+				"description": "Studying advanced software development with emphasis on MERN stack technologies, system design, and algorithmic thinking. Engaged in practical projects simulating real-world applications."
+			},
+			"edu3": {
+				"title": "Postgraduate Studies: Front-end Developer",
+				"dateStart": "March 2023",
+				"dateEnd": "March 2024",
+				"place": "Wroclaw, PL",
+				"description": "This program provided me with a comprehensive understanding of front-end development, including advanced JavaScript, React, and modern web technologies. It was instrumental in my transition to a full-time front-end developer role."
+			},
+			"edu4": {
+				"title": "Postgraduate Studies: Agile – Management in Organizations",
+				"dateStart": "April 2025",
+				"dateEnd": "Present",
+				"place": "Wroclaw, PL",
+				"description": "This program focuses on Agile methodologies and their application in organizational management, enhancing my skills in project management and team leadership."
+			},
+			"cer1": {
+				"title": "Course of ReactJS Developer",
+				"dateStart": "March 2023",
+				"dateEnd": "Completed",
+				"description": "During this course, I gained a deep understanding of the fundamentals of React — from creating components and managing state to routing and data management. This was a key step in my transition to modern front-end development."
+			},
+			"cer2": {
+				"title": "Course of Agile Scrum Master",
+				"dateStart": "April 2022",
+				"dateEnd": "Completed",
+				"description": "Gained foundational knowledge necessary for working as a Scrum Master in Agile methodology, including Scrum terminology, roles, Scrum reporting, and risk management."
+			},
+			"cer3": {
+				"title": "Course of JavaScript 2.0",
+				"dateStart": "October 2021",
+				"dateEnd": "Completed",
+				"description": "In this course, I studied the basics of JavaScript, including ES6 and asynchronous programming, which gave me a solid foundation for further growth as a frontend developer."
+			},
+			"cer4": {
+				"title": "Course Node.js",
+				"dateStart": "October 2024",
+				"dateEnd": "Completed",
+				"description": "In this course, I learned the basics of Node.js, including working with Express.js and mySQL, which allowed me to create full-stack applications and understand server-side development."
+			}
+		}
+	},
+	"skillsAction": {
+		"title": "Skills in",
+		"titleActive": "Action",
+		"subtitle": "More than a tech stack — real problems I solve on projects.",
+		"uxFirst": {
+			"description": "I design the structure, build responsive layouts, and assemble React interfaces that feel great on any device.",
+			"bullets": [
+				"Content hierarchy & user flows",
+				"Design system & tokens",
+				"Accessibility (ARIA, keyboard)",
+				"Jank-free animations (60 fps)",
+				"Font & image optimization",
+				"Dark mode, i18n",
+				"Code splitting, lazy routes",
+				"Lighthouse 90+ on mobile",
+				"SEO meta / OpenGraph"
+			]
+		},
+		"Auth": {
+			"description": "JWT with refresh tokens, OAuth (Google), private routes via middleware, and role-based access control."
+		},
+		"Database": {
+			"description": "Schema design in PostgreSQL, normalization, indexes (btree/GIN), migrations. Reduced search P95 latency by 60% after optimizations."
+		},
+		"API": {
+			"description": "REST/GraphQL integration, caching, retries with exponential backoff, and a circuit breaker."
+		},
+		"Real-time UX": {
+			"description": "Live updates via WebSockets/SSE (chats, tables) with auto-retry and backoff. Average latency <150 ms."
+		},
+		"Deploy": {
+			"description": "GitHub Actions → build/test/lint, preview deployments. Docker images and per-branch environments."
+		}
+	},
+	"footer": {
+		"title": "My code will support",
+		"titleActive": "any project",
+		"buttonBack": "Back to top"
+	}
+}

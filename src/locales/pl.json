@@ -1,0 +1,230 @@
+{
+	"header": {
+		"nav": {
+			"about": "O mnie",
+			"skills": "Umiejętności",
+			"portfolio": "Portfolio",
+			"contact": "Kontakt",
+			"education": "Edukacja"
+		},
+		"buttons": {
+			"contactMe": "Kontakt"
+		}
+	},
+	"hero": {
+		"greetingPrefix": "Cześć, jestem",
+		"typewriterWords": [
+			"Vladyslav!",
+			"Frontend Developer!",
+			"Projektant UX!",
+			"Programista backendu!",
+			"Inżynier oprogramowania!"
+		],
+		"subtitle": {
+			"part1": "Skupiam się na ",
+			"ux": "doświadczeniu użytkownika",
+			"performance": "wydajności",
+			"comma2": ", oraz łatwej w utrzymaniu architekturze ",
+			"architecture": "frontendu"
+		},
+		"paragraph": {
+			"line1": "Moja droga od studenta do developera ukształtowała to, jak tworzę dla ludzi.",
+			"line2": "Używam narzędzi najlepiej dopasowanych do zadania, aby budować interfejsy, które są naturalne, responsywne i łatwe w użyciu."
+		},
+		"buttons": {
+			"contactMe": "Kontakt",
+			"downloadCV": "Pobierz CV"
+		},
+		"statsSection": {
+			"experience": "Lata doświadczenia",
+			"completedProjects": "Zrealizowane projekty",
+			"satisfiedClients": "Zadowoleni klienci"
+		},
+		"technologiesSlider": {
+			"title": "Stos technologiczny"
+		}
+	},
+	"projects": {
+		"buttons": {
+			"privateRepo": "Prywatne repozytorium",
+			"liveDemo": "Live demo",
+			"noLiveDemo": "Brak wersji demo",
+			"unavailableRepo": "Repozytorium niedostępne"
+		},
+		"content": {
+			"title": "Projekty"
+		},
+		"cards": {
+			"resume": {
+				"description": "Osobista jednostronicowa strona CV z ciemnym, minimalistycznym motywem, i18n i animowanym hero."
+			},
+			"nails": {
+				"description": "Strona-landing dla salonu urody z rezerwacją przez Booksy, własną siatką galerii i SEO."
+			},
+			"smartchef": {
+				"description": "Bot Telegram oparty na mikroserwisach: profile użytkowników, planer posiłków, cele kaloryczne."
+			},
+			"weather": {
+				"description": "Animowana tygodniowa prognoza z API, testami i tematycznymi tłami."
+			}
+		}
+	},
+	"skills": {
+		"title": "Moje umiejętności",
+		"hardSkills": {
+			"react": {
+				"description": "Biegłe tworzenie dynamicznych i responsywnych interfejsów w React. Doświadczenie z hookami, Context API i architekturą komponentową. Używane w większości moich projektów front-endowych."
+			},
+			"jsEs6": {
+				"description": "Dobra znajomość nowoczesnych funkcji JavaScript, programowania asynchronicznego i manipulacji DOM. Piszę czysty, wydajny i łatwy w utrzymaniu kod."
+			},
+			"tailwindCss": {
+				"description": "Praca z frameworkiem CSS typu utility-first do szybkiego budowania własnych designów. Swobodnie tworzę layouty responsywne, tryb ciemny i personalizacje przez tailwind.config.js."
+			},
+			"nodeJs": {
+				"description": "Tworzenie usług backendowych i API w Node.js i Express. Znajomość zasad REST i wzorców asynchronicznych."
+			},
+			"git": {
+				"description": "Biegła kontrola wersji w Git, w tym branchowanie, mergowanie, rebase i skuteczna współpraca na GitHubie."
+			},
+			"ts": {
+				"description": "Używam TypeScriptu, aby wzbogacić projekty JS o statyczne typowanie — to poprawia jakość kodu, utrzymywalność i doświadczenie developera."
+			},
+			"buttons": {
+				"hide": "Pokaż mniej",
+				"show": "Dowiedz się więcej"
+			}
+		},
+		"softSkills": {
+			"title": "Kompetencje miękkie",
+			"name": {
+				"teamwork": "Praca zespołowa",
+				"leadership": "Przywództwo",
+				"creativity": "Kreatywność",
+				"timeManagement": "Zarządzanie czasem",
+				"problemSolving": "Rozwiązywanie problemów",
+				"adaptability": "Elastyczność"
+			}
+		}
+	},
+	"experience": {
+		"title": "Moja droga",
+		"subtitle": {
+			"experience": "Doświadczenie",
+			"education": "Edukacja",
+			"certificates": "Certyfikaty"
+		},
+		"cards": {
+			"buttonInfo": "Dowiedz się więcej",
+			"work1": {
+				"title": "Stażysta Front-end Developer",
+				"dateStart": "Lipiec 2018",
+				"dateEnd": "Grudzień 2018",
+				"place": "Kijów, Ukraina",
+				"description": [
+					"Opracowywałem nowe funkcje flagowego produktu w JS oraz HTML/CSS.",
+					"Współpracowałem z zespołem 5 inżynierów w środowisku Agile.",
+					"Wspierałem naprawę błędów i poprawę wydajności aplikacji."
+				]
+			},
+			"work2": {
+				"title": "Junior React Developer",
+				"dateStart": "Luty 2024",
+				"dateEnd": "Maj 2024",
+				"place": "Zdalnie",
+				"description": "Budowałem i utrzymywałem strony klientów w React, TailwindCSS i Node.js. Bezpośrednio współpracowałem z klientami przy zbieraniu wymagań i wsparciu."
+			},
+			"edu1": {
+				"title": "Licencjat z informatyki",
+				"dateStart": "Wrzesień 2014",
+				"dateEnd": "Marzec 2019",
+				"place": "Dąbrowa Górnicza, PL",
+				"description": "Program obejmował struktury danych, algorytmy, tworzenie aplikacji webowych i zarządzanie bazami danych. Projekt końcowy: gra TPP w Unity z przeciwnikami sterowanymi prostym AI i podstawowymi mechanikami walki."
+			},
+			"edu2": {
+				"title": "Magister informatyki",
+				"dateStart": "Wrzesień 2024",
+				"dateEnd": "Obecnie",
+				"place": "Wrocław, PL",
+				"description": "Zaawansowane wytwarzanie oprogramowania ze szczególnym naciskiem na stos MERN, projektowanie systemów i myślenie algorytmiczne. Udział w praktycznych projektach odwzorowujących realne aplikacje."
+			},
+			"edu3": {
+				"title": "Studia podyplomowe: Front-end Developer",
+				"dateStart": "Marzec 2023",
+				"dateEnd": "Marzec 2024",
+				"place": "Wrocław, PL",
+				"description": "Program dał mi kompleksowe zrozumienie front-endu, w tym zaawansowanego JavaScriptu, Reacta i nowoczesnych technologii webowych. Był kluczowy w moim przejściu do roli front-end developera."
+			},
+			"edu4": {
+				"title": "Studia podyplomowe: Agile – zarządzanie w organizacjach",
+				"dateStart": "Kwiecień 2025",
+				"dateEnd": "Obecnie",
+				"place": "Wrocław, PL",
+				"description": "Program skupia się na metodykach Agile i ich zastosowaniu w zarządzaniu organizacjami, rozwijając kompetencje z zakresu zarządzania projektami i przywództwa."
+			},
+			"cer1": {
+				"title": "Kurs ReactJS Developer",
+				"dateStart": "Marzec 2023",
+				"dateEnd": "Ukończono",
+				"description": "Podczas kursu zdobyłem solidne podstawy Reacta — od tworzenia komponentów i zarządzania stanem po routing i pracę z danymi. To był kluczowy krok w wejściu w nowoczesny front-end."
+			},
+			"cer2": {
+				"title": "Kurs Agile Scrum Master",
+				"dateStart": "Kwiecień 2022",
+				"dateEnd": "Ukończono",
+				"description": "Zdobyłem wiedzę niezbędną do pracy jako Scrum Master: terminologia, role, raportowanie w Scrumie oraz zarządzanie ryzykiem."
+			},
+			"cer3": {
+				"title": "Kurs JavaScript 2.0",
+				"dateStart": "Październik 2021",
+				"dateEnd": "Ukończono",
+				"description": "Poznałem podstawy JavaScriptu, w tym ES6 i programowanie asynchroniczne, co dało solidny fundament do dalszego rozwoju jako front-end developer."
+			},
+			"cer4": {
+				"title": "Kurs Node.js",
+				"dateStart": "Październik 2024",
+				"dateEnd": "Ukończono",
+				"description": "Nauczyłem się podstaw Node.js, w tym pracy z Express.js i MySQL, co pozwoliło mi tworzyć aplikacje full-stack i zrozumieć backend."
+			}
+		}
+	},
+	"skillsAction": {
+		"title": "Umiejętności w",
+		"titleActive": "Praktyce",
+		"subtitle": "Nie tylko stos technologii — realne problemy, które rozwiązuję w projektach.",
+		"uxFirst": {
+			"description": "Projektuję strukturę, tworzę responsywne layouty i składam interfejsy w React, które świetnie działają na każdym urządzeniu.",
+			"bullets": [
+				"Hierarchia treści i scenariusze użytkownika",
+				"System projektowy i tokeny",
+				"Dostępność (ARIA, klawiatura)",
+				"Płynne animacje (60 fps)",
+				"Optymalizacja czcionek i obrazów",
+				"Tryb ciemny, i18n",
+				"Podział kodu, leniwe trasy",
+				"Lighthouse 90+ na mobile",
+				"Meta SEO / OpenGraph"
+			]
+		},
+		"Auth": {
+			"description": "JWT z tokenami odświeżania, OAuth (Google), prywatne trasy przez middleware oraz kontrola dostępu oparta na rolach."
+		},
+		"Database": {
+			"description": "Projektowanie schematu w PostgreSQL, normalizacja, indeksy (btree/GIN), migracje. Skrócenie opóźnienia P95 wyszukiwania o 60% po optymalizacjach."
+		},
+		"API": {
+			"description": "Integracja REST/GraphQL, cache, ponowne próby z wykładniczym opóźnieniem oraz circuit breaker."
+		},
+		"Real-time UX": {
+			"description": "Aktualizacje na żywo przez WebSockets/SSE (czaty, tabele) z automatycznymi retry i backoffem. Średnie opóźnienie <150 ms."
+		},
+		"Deploy": {
+			"description": "GitHub Actions → build/test/lint, podglądowe wdrożenia. Obrazy Dockera i środowiska na gałęzie."
+		}
+	},
+	"footer": {
+		"title": "Mój kod wesprze",
+		"titleActive": "każdy projekt",
+		"buttonBack": "Powrót na górę"
+	}
+}
