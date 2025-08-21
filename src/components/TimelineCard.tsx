@@ -52,15 +52,11 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ item }) => {
 		>
 			<div className='flex justify-between items-start'>
 				<div>
-					<h3 className='text-lg font-semibold text-gray-800 dark:text-white'>
-						{t(item.title)}
-					</h3>
+					<h3 className='text-lg font-semibold text-white'>{t(item.title)}</h3>
 
-					<p className='text-sm text-brand dark:text-brand-light font-medium'>
-						{t(item.place)}
-					</p>
+					<p className='text-sm text-white/90 font-medium'>{t(item.place)}</p>
 
-					<p className='text-xs text-gray-500 dark:text-gray-400 mt-1'>
+					<p className='text-xs text-gray-400 mt-1'>
 						{formatDateRange(t(item.dateStart), t(item.dateEnd))}
 						{item.location && (
 							<span className='ml-2 inline-flex items-center'>
@@ -74,7 +70,7 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ item }) => {
 				<button
 					type='button'
 					onClick={toggleExpand}
-					className='p-2 text-gray-600 dark:text-gray-400 hover:text-brand dark:hover:text-brand-light'
+					className='p-2 text-gray-400 hover:text-brand'
 					aria-expanded={isExpanded}
 					aria-controls={`timeline-desc-${item.id}`}
 				>
@@ -85,16 +81,16 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ item }) => {
 			{isExpanded && (
 				<div
 					id={`timeline-desc-${item.id}`}
-					className='mt-4 pt-4 border-t border-gray-200 dark:border-gray-700'
+					className='mt-4 pt-4 border-t border-gray-700'
 				>
 					{Array.isArray(rawDescription) ? (
-						<ul className='list-disc list-inside space-y-1 text-sm text-gray-700 dark:text-gray-300'>
+						<ul className='list-disc list-inside space-y-1 text-sm text-gray-400'>
 							{rawDescription.map((line, i) => (
 								<li key={i}>{line}</li>
 							))}
 						</ul>
 					) : rawDescription ? (
-						<p className='text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line'>
+						<p className='text-sm text-gray-300 whitespace-pre-line'>
 							{
 								rawDescription /* это уже строка (или пришла из t, или старый текст) */
 							}
@@ -106,7 +102,7 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ item }) => {
 							href={item.link}
 							target='_blank'
 							rel='noopener noreferrer'
-							className='inline-flex items-center mt-3 text-sm text-brand dark:text-brand-light hover:underline'
+							className='inline-flex items-center mt-3 text-sm text-brand hover:underline'
 						>
 							{t('commons.learnMore', { defaultValue: 'Learn More' })}
 							<FaExternalLinkAlt className='ml-1.5 w-3 h-3' />

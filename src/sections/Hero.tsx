@@ -1,6 +1,6 @@
 import NodeIcon from '@/assets/icons/NodeJS'
 import StatsSection from '@/components/StatsSection'
-import React, { useRef } from 'react'
+import React, { useMemo, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Typewriter } from 'react-simple-typewriter'
 import ReactIcon from '../assets/icons/ReactIcon' // Import the React icon component
@@ -32,6 +32,17 @@ const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
 		{ name: 'Node.js', icon: <NodeIcon className='w-full h-full' /> }, // Use the NodeIcon component
 	]
 
+	// 1) Берём массив слов из локали
+	const words = t('hero.typewriterWords', { returnObjects: true }) as string[]
+
+	// 2) Находим самую длинную строку для текущего языка
+	const longest = useMemo(
+		() =>
+			Array.isArray(words) && words.length
+				? words.reduce((a, b) => (a.length >= b.length ? a : b))
+				: '',
+		[words]
+	)
 	return (
 		<>
 			<section
@@ -71,7 +82,7 @@ const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
 											aria-hidden='true'
 											className='invisible block whitespace-nowrap'
 										>
-											{t('hero.typewriter.4')}
+											{longest}
 										</span>
 
 										{/* typewriter эффект */}
@@ -104,6 +115,7 @@ const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
 									</span>
 									{t('hero.subtitle.comma2')}{' '}
 									<span className='text-brand font-bold'>
+										{' '}
 										{t('hero.subtitle.architecture')}
 									</span>
 									.

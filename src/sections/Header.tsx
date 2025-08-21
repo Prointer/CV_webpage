@@ -162,6 +162,7 @@ const Header: React.FC<HeaderProps> = ({ toggleModal }) => {
 					))}
 					{/* Кнопки GitHub + Contact в мобилке */}
 					<div className='flex flex-row gap-6 mt-2'>
+						<LanguageSwitcher />
 						<a
 							href='https://github.com/prointer'
 							target='_blank'

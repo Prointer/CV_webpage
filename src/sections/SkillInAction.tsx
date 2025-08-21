@@ -19,38 +19,38 @@ type Skill = {
 const skills: Skill[] = [
 	{
 		title: 'UX-first Website Design & Build',
-		desc: 'I design the structure, build responsive layouts, and assemble React interfaces that feel great on any device.',
+		desc: 'skillsAction.uxFirst.description',
 		badges: ['UX', 'UI', 'React', 'TypeScript', 'GSAP', 'A11y'],
 		big: true,
 		icon: <IconUx />,
 	},
 	{
 		title: 'Authentication & Security',
-		desc: 'JWT with refresh tokens, OAuth (Google), private routes via middleware, and role-based access control.',
+		desc: 'skillsAction.Auth.description',
 		badges: ['OAuth2', 'JWT', 'RBAC', 'RLS'],
 		icon: <IconAuth />,
 	},
 	{
 		title: 'Database & Data Modeling',
-		desc: 'Schema design in PostgreSQL, normalization, indexes (btree/GIN), migrations. Reduced search P95 latency by 60% after optimizations.',
+		desc: 'skillsAction.Database.description',
 		badges: ['Postgres', 'Prisma/Drizzle', 'Indexes'],
 		icon: <IconDB />,
 	},
 	{
 		title: 'API Integration',
-		desc: 'REST/GraphQL integration, caching, retries with exponential backoff, and a circuit breaker.',
+		desc: 'skillsAction.API.description',
 		badges: ['REST', 'GraphQL', 'Caching'],
 		icon: <IconAPIv2 className='text-brand' />,
 	},
 	{
 		title: 'Real-time UX',
-		desc: 'Live updates via WebSockets/SSE (chats, tables) with auto-retry and backoff. Average latency <150 ms.',
+		desc: 'skillsAction.RealtimeUX.description',
 		badges: ['WebSocket', 'SSE', 'Realtime'],
 		icon: <IconRealtime />,
 	},
 	{
 		title: 'CI/CD & Deploy',
-		desc: 'GitHub Actions → build/test/lint, preview deployments. Docker images and per-branch environments.',
+		desc: 'skillsAction.Deploy.description',
 		badges: ['GHA', 'Docker', 'Vercel/Fly'],
 		icon: <IconDeploy />,
 	},
@@ -111,7 +111,7 @@ const SkillsInAction: React.FC = () => {
 									{s.title}
 								</h3>
 								<p className='mt-1 text-sm sm:text-[15px] text-white/70'>
-									{s.desc}
+									{t(s.desc)}
 								</p>
 
 								{/* Доп. контент для «большой» карточки: списки преимуществ (показываем только на ≥ sm) */}

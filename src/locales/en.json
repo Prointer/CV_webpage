@@ -215,7 +215,7 @@
 		"API": {
 			"description": "REST/GraphQL integration, caching, retries with exponential backoff, and a circuit breaker."
 		},
-		"Real-time UX": {
+		"RealtimeUX": {
 			"description": "Live updates via WebSockets/SSE (chats, tables) with auto-retry and backoff. Average latency <150 ms."
 		},
 		"Deploy": {

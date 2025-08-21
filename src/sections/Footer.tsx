@@ -1,8 +1,8 @@
 // src/sections/Footer.tsx
 import ContactCard from '@components/ContactCard'
 import React, { useEffect, useState } from 'react'
-import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
+import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa'
 
 // простой хук для медиа-запроса (чтобы на мобиле карта была авто-высоты)
 function useMediaQuery(query: string) {
@@ -156,7 +156,7 @@ const Footer: React.FC = () => {
 					</div>
 
 					{/* RIGHT 40% — карточка без лишних обёрток/бордеров */}
-					<div className='md:col-span-2 flex h-full'>
+					<div className='md:col-span-2 flex h-[calc(100%+50px)]'>
 						<ContactCard
 							mode={isMdUp ? 'fill' : 'auto'}
 							className='w-full h-auto md:h-full md:max-w-[520px] md:ml-auto'
