@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
 	const { t } = useTranslation()
 	const handleDownloadCV = () => {
 		const a = document.createElement('a')
-		a.href = '/resume.pdf'
+		a.href = 'dist/resume.pdf'
 		a.download = 'Vladyslav_Omelianenko_CV_Frontend_Developer.pdf'
 		a.click()
 	}

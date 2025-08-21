@@ -17,9 +17,9 @@ const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
 	const textBlockRef = useRef<HTMLDivElement>(null)
 	const { t } = useTranslation()
 
-	const handleDowloadCV = () => {
+	const handleDownloadCV = () => {
 		const link = document.createElement('a')
-		link.href = '/resume.pdf' // Path to CV file
+		link.href = 'dist/resume.pdf' // Path to CV file
 		link.download = 'Vladyslav_Omelianenko_CV_Frontend_Developer.pdf' // Name for the downloaded file
 		link.click()
 	}
@@ -147,7 +147,7 @@ const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
 
 								<button
 									type='button'
-									onClick={handleDowloadCV}
+									onClick={handleDownloadCV}
 									className='
                     w-full sm:w-auto sm:min-w-[220px]
                     px-6 py-3
