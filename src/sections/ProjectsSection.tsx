@@ -20,7 +20,7 @@ const projects: Project[] = [
 		title: 'LA Studio Nails',
 		description: 'projects.cards.nails.description',
 		tech: ['React', 'TS', 'SCSS'],
-		liveUrl: 'https://…', // если пока нет — просто убери/оставь пустым
+		liveUrl: 'https://la-nails-studio.pl/', // рабочий сайт салона
 		repoUrl: 'https://github.com/Prointer/la-studio-nails',
 		size: 'wide',
 		icon: <AppWindowIcon className='w-30 h-40' />,
