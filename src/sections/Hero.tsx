@@ -19,7 +19,7 @@ const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
 
 	const handleDownloadCV = () => {
 		const link = document.createElement('a')
-		link.href = 'dist/resume.pdf' // Path to CV file
+		link.href = import.meta.env.BASE_URL + 'resume.pdf' // Path to CV file
 		link.download = 'Vladyslav_Omelianenko_CV_Frontend_Developer.pdf' // Name for the downloaded file
 		link.click()
 	}
